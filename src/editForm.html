@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name=description>
+    <meta http-equiv=X-UA-Compatible content="IE=edge,chrome=1">
+    <meta name=renderer content=webkit>
+    <meta http-equiv=keywords content=LOL租号，LOL租号平台，英雄联盟租号，租号玩>
+    <meta http-equiv=description content="虚贝网是国内专业的LOL租号平台，提供全区全服英雄联盟 游戏账号出租，上万个高端极品账号供您选择，想要租号玩就来虚贝网！">
+    <title>我要发布_租号玩_虚贝网</title>
+    <link rel="icon" href="http://static.xubei.com/assets/images/fav-icon.png" />
+    <link href="./css/common/basic.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="./css/fillForm.css" type="text/css" />
+    <link rel="stylesheet" href="./css/lib/webuploader.css" type="text/css">
+</head>
+<body>
+    <div class="hx-component-header"></div>
+    <div class="fillForm w1200">
+        <div class="caption">修改商品</div>
+        <form id="commentForm" method = 'post'  action="http://localhost:8081/zx-goods-api/goods/saveGoods">
+            <input type="hidden" id="actity_str" name="actity_str"/>
+            <input type="hidden" id="actity" name="actity"/>
+            <input type="hidden" id="isShow" name="isShow"/>
+            <input type="hidden" id="phoneType" name="phoneType"/>
+            <input type="hidden" id="textArr" name="textArr"/>
+            <input type="hidden" id="goodsAttr" name="goodsAttr"/>
+            <input type="hidden" id="selectedAllName" name="selectedAllName"/>
+            <input type="hidden" id="gameId" name="bigGameId"/>
+            <input type="hidden" id="goodsId" name="goodsId" />
+            <div class="details">
+                <div class="title">
+                    <span class="t_name">填写商品资料</span>
+                    <span class="t_tips">注：正确填写一下信息，才能让交易正常完成！红色<span class="colorRed">“*”</span>必填项</span>
+                </div>
+                <ul>
+                    <li>
+                        <label><span class="colorRed">*</span>适配系统：</label>
+                        <div class="system radio" data-field='radio' name="system">
+                            <span class="active" data-val="0">安卓<i></i></span>
+                            <span data-val="1">苹果<i></i></span>
+                        </div>
+                    </li>
+                    <li>
+                        <label><span class="colorRed">*</span>商品标题：</label>
+                        <input type="text" name="goodsTitle" class="form_control goodsTitle" data-field='text' placeholder="描述账号的详细情况（如热门英雄、铭文等级等），提高成交率。不要填写任何联系方式，否则不予通过！" />
+                    </li>
+                    <li>
+                        <label><span class="colorRed">*</span>商品描述：</label>
+                        <textarea  name="remark" class="goodsDescribe form_control"  data-field='textarea' placeholder="描述账号的详细情况，提高成交率，可以对标题进行补充说明和介绍，但不能填写任何联系方式，否则不予通过 !"></textarea>
+                    </li>
+                    <li>
+                        <label><span class="colorRed">*</span>游戏截图：</label>
+                        <div id="uploader-demo" class="upload-box">
+                            <div id="filePicker">点击上传
+                            </div>
+                            <div class="explain">游戏截图不能为空</div>
+                            <div id="list" class="upload-box-list"></div>
+                        </div>
+                    </li>
+                    <li>
+                        <label><span class="colorRed">*</span>账号类型：</label>
+                        <div class="accountType radio" data-field='radio' name="accountType"><span data-val="0" class="active">QQ<i></i></span><span data-val="1">微信<i></i></span></div>
+                    </li>
+                    <li>
+                        <label><span class="colorRed">*</span>游戏账号：</label>
+                        <input type="text" name="gameAcount" class="form_control" data-field='text' placeholder="请填写您的游戏账号" />
+                    </li>
+                    <li>
+                        <label><span class="colorRed">*</span>游戏密码：</label>
+                        <input type="text" name="gamePwd" class="form_control" data-field='text' placeholder="请填写您的游戏密码" />
+
+                    </li>
+                    <li>
+                        <label id="aa"><span class="colorRed" >*</span>上号方式：</label>
+                        <div class="shWay radio" data-field='radio' name="shWay">
+                            <span class="active" data-val="1">账号密码登录<i></i></span>
+                            <!-- <span data-val="1">上号器登录<i></i></span> -->
+                        </div>
+                        <div class="input_tips">注释：当选择账号密码登录时，租赁时间结束后商品会自动下架，请修改密码后自动下架！</div>
+                    </li>
+                </ul>
+            </div>
+            <div class="details">
+                <div class="title">
+                    <span class="t_name">填写账号详细信息</span>
+                </div>
+                <ul>
+                    <div id="field">
+
+                    </div>
+
+                    <li>
+                        <label><span class="colorRed">*</span>租金设置：</label>
+                        <div class="rentSetting">
+                            <div class="clearfix">
+                                <span>按时租</span>
+                                <input type="text" name="leasePrice" data-field='text'/>
+                                <b class="unit">元/小时</b>
+                            </div>
+                            <div class="clearfix">
+                                <span>10小时畅玩</span>
+                                <input type="text" name="tenHours" data-field='text' />
+                                <b class="unit">元/次</b>
+                            </div>
+                            <div class="clearfix">
+                                <span>按天租</span>
+                                <input type="text" name="dayHours" data-field='text'/>
+                                <b class="unit">元/日</b>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <label><span class="colorRed">*</span>押金设置：</label>
+                        <input type="text" name="foregift" class="form_control deposit" data-field='text'/>
+                        <b class="unit">元</b>
+                    </li>
+                    <li>
+                        <label><span class="colorRed">*</span>最短租赁时间：</label>
+                        <input type="text" name="shortLease" class="form_control" data-field='text' />
+                        <input type="hidden" name="loginToken" id="loginToken" />
+                        <b class="unit">小时</b>
+                    </li>
+                    <li>
+                        <label>优惠活动：</label>
+                        <div class="dianjuan radio" id="actitys" name="actitys" data-field='radio'></div>
+                        <div class="input_tips">注：优惠活动目前只针对时租，选择优惠活动有助于提高成交率，非必填项！</div>
+                    </li>
+                </ul>
+            </div>
+            <div class="details">
+                <div class="title">
+                    <span class="t_name">确认您的联系方法</span>
+                </div>
+                <ul>
+                    <li>
+                        <label><span class="colorRed">*</span>确认您的手机号：</label>
+                        <input type="text" class="form_control" name="phone" data-field='text'/>
+                    </li>
+                    <li>
+                        <label>确认您的QQ号：</label>
+                        <input type="text" name="qq" class="form_control" data-field='text' />
+                    </li>
+                    <li>
+                        <label></label>
+                        <input type="checkbox" name="agree" class="form_control agree" checked />
+                        <span class="read">我已阅读并同意<a href="http://www.xubei.com/help/servicesDetail.htm?articleId=57" target="_blank">《虚贝悬赏发布规则及交易协议》</a></span>
+                    </li>
+                </ul>
+            </div>
+            <input class="submit_btn" type="submit" value="确认提交" />
+        </form>
+    </div>
+    <div class="hx-component-footer"></div>
+</body>
+<script src="./js/lib/require.min.js"></script>
+<script src="./js/re-config.js"></script>
+<script src="./js/editForm.js"></script>
+</html>

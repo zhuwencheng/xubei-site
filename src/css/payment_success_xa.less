@@ -1,0 +1,184 @@
+@line-color:#e2e2e2;
+@xb-blue:#208fdd;
+
+.main {
+  background-color: #F6F6F6;
+  /* 路径导航 */
+  > .nav {
+    width: 1185px;
+    height: 40px;
+    line-height: 40px;
+    padding-left: 15px;
+    background-color: #f6f6f6;
+    > ul {
+      > li {
+        float: left;
+      }
+    }
+
+  }
+
+  /* 成功订单的内容 */
+  >.content{
+    width: 100%;
+    height: 315px;
+    background-color: #fff;
+    >.content-l{
+      float: left;
+      width: 419px;
+      height: 100%;
+      border-right: 1px solid @line-color;
+      >.x-title{
+        margin-top: 30px;
+        overflow: hidden;
+        padding-left: 60px;
+        margin-bottom: 10px;
+        >span{
+          float: left;
+          width: 38px;
+          height: 38px;
+          display: inline-block;
+          background: url("../images/icon.png") 54px 1455px;
+        }
+        >.x-success{
+          float: left;
+          display: inline-block;
+          font-size: 16px;
+          font-weight: bold;
+          color: #333;
+          margin: 5px 20px;
+        }
+        >a{
+          margin-top: 6px;
+          float: left;
+          color: @xb-blue;
+        }
+      }
+      >#qrcode{
+        margin-left: 140px;
+      }
+      >.x-ios{
+        margin-top: 18px;
+        margin-left: 85px;
+        .x-success{
+          color: #373737;
+          >.ios-icon{
+            display: inline-block;
+            margin-right: 15px;
+            margin-top: -8px;
+            width: 28px;
+            height: 28px;
+            background: url("../images/icon.png") 50px 932px;
+            vertical-align: middle;
+          }
+          >.x-fw{
+            color: @xb-blue;
+          }
+        }
+        >.x-look{
+          margin-left: 43px;
+        }
+      }
+    }
+
+    >.content-r{
+      width: 780px;
+      float: left;
+      height: 100%;
+      box-sizing: border-box;
+      padding-left: 50px;
+      padding-top: 30px;
+      line-height: 35px;
+      >.qu{
+        >a{
+          color: @xb-blue;
+          margin-left: 25px;
+        }
+      }
+      >.order{
+        >a{color: @xb-blue;
+          margin-left: 25px;
+        }
+      }
+      >.timeLong{
+        >a{
+          display: inline-block;
+          width: 70px;
+          height: 25px;
+          background-color: @xb-blue;
+          color: #fff;
+          border-radius: 5px;
+          margin-left: 25px;
+          text-align: center;
+          line-height: 25px;
+        }
+      }
+    }
+  }
+
+  /* 登录游戏的提示 */
+  >.prompt{
+    width: 100%;
+    overflow: hidden;
+    >.tit{
+      float: left;
+      width: 100%;
+      height: 40px;
+      background-color: #2faded;
+      box-sizing: border-box;
+      padding-left: 60px;
+      >span{
+        float: left;
+        width: 23px;
+        height: 23px;
+        background: url("../images/doubt.png") no-repeat;
+        margin-top: 8px;
+        margin-right: 15px;
+      }
+      >p{
+        line-height: 40px;
+        color: #fff;
+      }
+    }
+    >.dsc{
+      background-color: #fff;
+      width: 100%;
+      box-sizing: border-box;
+      height: 480px;
+      overflow: hidden;
+      >.img{
+        float: left;
+        margin-top: 40px;
+        margin-left: 200px;
+        width: 480px;
+        height: 392px;
+        background: url("../images/apple.png") no-repeat;
+      }
+      >.txt{
+        float: left;
+        width: 500px;
+        height: 480px;
+        box-sizing: border-box;
+        padding-left: 40px;
+        >.top{
+          margin-top: 190px;
+          margin-left: 25px;
+          >.ios-icon{
+            display: inline-block;
+            margin-right: 15px;
+            margin-top: -8px;
+            width: 28px;
+            height: 28px;
+            background: url("../images/icon.png") 50px 932px;
+            vertical-align: middle;
+          }
+        }
+        >.bom{
+          color: #555;
+          font-size: 12px;
+          margin-top: 15px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,34 @@
+<form class="registLayerForm">
+    <div>
+        <label>手机号：</label>
+        <input name="tel" type="text" placeholder="请填写手机号" id="c-phone" /><span class="f12 red" id="r-phone-error" style="display:none;">手机号已注册</span>
+    </div>
+    <div class="checkCode1">
+        <label>验证码：</label>
+        <input name="yzmImg" type="text" />
+        <img id="imgcode" /><span class="f12 red mgl-20" id="img-error" style="display:none;">验证码错误</span>
+    </div>
+    <div class="checkCode2">
+        <label>短信验证码：</label>
+        <input name="yzmTel" type="text" />
+        <span class="getCode disabled">获取验证码</span>
+    </div>
+    <div class="settingPsd">
+        <label>请设置密码：</label>
+        <input name="password" type="password" />
+    </div>
+    <div class="settingPsd">
+        <label>重复密码：</label>
+        <input name="rpassword" type="password" />
+    </div>
+    <div class="agreement">
+        <label></label>
+        <input name="agree" type="checkbox" class="read"/>
+        <span>我已阅读并同意<a href="javascript:;">《虚贝分享平台服务协议》</a></span>
+    </div>
+    <div class="registLayerBtn">
+        <label></label>
+        <input type="button" value="同意以上协议，立即注册" id="sign-submit">
+    </div>
+    <div class="goLogin">已有虚贝号？请<a href="javascript:;">登录</a></div>
+</form>

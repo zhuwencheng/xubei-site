@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html>
+
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="wq-css/basic.css" />
+    <link rel="stylesheet" href="wq-css/main.css" />
+    <link rel="stylesheet" href="wq-css/webuploader.css" />
+    <script src="wq-js/jquery-1.9.1.min.js"></script>
+    <script src="wq-js/webuploader.min.js">
+    </script>
+
+</head>
+
+<body>
+    <div class="w1200 wq-title">申请维权</div>
+    <div class="bg-fff wrapper">
+        <div class="order-top">
+            <div>
+                订单编号： <span class="data-text" data-name="order_no"></span>
+            </div>
+            <div>
+                订单状态： <span class="data-text" data-name="status_name"></span>
+            </div>
+            <div>
+                下单时间： <em class="data-text" data-name="create_time"></em>
+            </div>
+        </div>
+        <div class="order-card">
+            <div class="o-detail">
+                <div class="hd">订单详情</div>
+                <dl class="img-box">
+                    <dt><img src="" class="data-text" data-name="image_path"/></dt>
+                    <dd><em class="data-text" data-name="goods_title"></em></dd>
+                    <dd><em class="data-text" data-name="game_all_name"></em></dd>
+                </dl>
+                <div class="bd">
+                    <p>订单编号： <em class="data-text" data-name="order_no"></em></p>
+
+                    <!-- <p>卖　　家： <em class="data-text" data-name="mobile"></em></p>
+
+                <p>QQ 　号： <em class="data-text" data-name="qq_number"></em></p>
+
+                <p>订单金额： <em class="data-text" data-name="amount"></em> 元</p>
+
+                <p>订单押金： <em class="data-text" data-name="foregift_amount"></em> 元</p> -->
+
+                    <!-- <p>实际付款： <em class="data-text" data-name="actual_amount"></em> 元</p> -->
+
+                    <p>开始时间： <em class="data-text" data-name="begin_time"></em></p>
+
+                    <p>结束时间： <em class="data-text" data-name="end_time"></em></p>
+                </div>
+            </div>
+            <div class="o-form">
+                <div class="form-item">
+                    <span class="label">选择维权原因：</span>
+                    <select name="" id="selectreson">
+                    <option value="10">异地或锁定导致无法登陆</option>
+                    <option value="8">账号在线或顶号导致无法正常游戏</option>
+                    <option value="11">账号信息与描述不符</option>
+                    <option value="7">密码错误导致无法登陆</option>
+                    <option value="4">账号被封</option>
+                    <option value="26">虚贝百宝箱异常</option>
+                    <option value="0">其他问题</option>
+                </select>
+                </div>
+                <div class="form-item">
+                    <span class="label">维权说明：</span>
+                    <textarea placeholder="请填写维权说明" id="des"></textarea>
+                </div>
+                <div class="form-item">
+                    <span class="label">上传图片：</span>
+
+                    <div id="uploader-demo" class="upload-box">
+                        <!--用来存放item-->
+                        <div id="fileList" class="uploader-list"></div>
+                        <div id="filePicker">点击上传</div>
+                        <div id="list"></div>
+                    </div>
+                </div>
+                <div class="btn-wrapper"><span class="btn">提交</span></div>
+            </div>
+
+        </div>
+    </div>
+</body>
+
+<script>
+    var uploader = WebUploader.create({
+
+        // 选完文件后，是否自动上传。
+        auto: true,
+
+        // swf文件路径
+        swf: './wq-js/Uploader.swf',
+
+        // 文件接收服务端。
+        server: 'http://good-api.xubei.com/goods-api/arbitration/upTemp',
+        //server:'http://10.0.9.254:8081/zx-goods-api/arbitration/upTemp',
+        // 选择文件的按钮。可选。
+        // 内部根据当前运行是创建，可能是input元素，也可能是flash.
+        pick: '#filePicker',
+
+        // 只允许选择图片文件。
+        accept: {
+            title: 'Images',
+            extensions: 'gif,jpg,jpeg,bmp,png',
+            mimeTypes: 'image/*'
+        }
+    });
+    uploader.on('fileQueued', function(file) {
+        var $li = $(
+                '<div id="' + file.id + '" class="file-item thumbnail">' +
+                '<span class="close">×</span><img>' +
+                '<div class="info">' + file.name + '</div>' +
+                '</div>'
+            ),
+            $img = $li.find('img');
+
+
+        // $list为容器jQuery实例
+        $('#list').append($li);
+
+        // 创建缩略图
+        // 如果为非图片文件，可以不用调用此方法。
+        // thumbnailWidth x thumbnailHeight 为 100 x 100
+        uploader.makeThumb(file, function(error, src) {
+            if (error) {
+                $img.replaceWith('<span>不能预览</span>');
+                return;
+            }
+
+            $img.attr('src', src);
+        }, 70, 70);
+    });
+    uploader.on('uploadSuccess', function(file, b) {
+        $('#' + file.id).attr('data-src', b.result.image_path);
+        $('#' + file.id).addClass('upload-state-done');
+    });
+
+    // 文件上传失败，显示上传出错。
+    uploader.on('uploadError', function(file) {
+        var $li = $('#' + file.id),
+            $error = $li.find('div.error');
+
+        // 避免重复创建
+        if (!$error.length) {
+            $error = $('<div class="error"></div>').appendTo($li);
+        }
+
+        $error.text('上传失败');
+    });
+    $('body').on('click', '.close', function() {
+        $(this).closest('.file-item').remove();
+    });
+</script>
+<script>
+    $(function() {
+        function getCookie(name) {
+            var arr, reg = new RegExp("(^| )" + name + "=([^;]*)(;|$)");
+            if (arr = document.cookie.match(reg))
+                return unescape(arr[2]);
+            else
+                return null;
+        }
+        var params = {
+            orderNo: getUrlParam('orderNo'),
+            businessNo: getUrlParam('businessNo'),
+            userId: getCookie('loginToken')
+        }
+        $.ajax({
+            url: BASE_URL.order + '/master/order/user/findOrderItemByOrderNo',
+            dataType: "jsonp",
+            data: params,
+            success: function(data) {
+                if (data.code === '1') {
+                    $('.data-text').each(function(i, item) {
+                        if ($(item).prop("tagName") === 'IMG') {
+                            $(item).attr('src', data.result[$(item).attr('data-name')])
+                        } else {
+                            $(item).text(data.result[$(item).attr('data-name')] || '')
+                        }
+                    });
+                }
+            }
+        });
+        $('.btn').click(submitRight);
+
+        function submitRight() {
+            var urlArray = [];
+            $.each($('.upload-state-done'), function(i, item) {
+                urlArray.push($(item).attr('data-src'));
+            });
+            var _params = {
+                rightReason: $('#selectreson').val(),
+                rightsProtection: $('#des').val(),
+                urls: urlArray
+            };
+            $.extend(_params, params);
+            if (_params.rightsProtection === '') {
+                alert('维权说明不能为空！');
+                return;
+            }
+            $.ajax({
+                url: BASE_URL.user + 'arbitration/leaseeSubArbitration',
+                dataType: "jsonp",
+                data: _params,
+                success: function(data) {
+                    if (data.code === '1') {
+                        alert('维权成功！');
+                        window.location.href = "http://www.xubei.com/user/index.htm";
+                    } else {
+                        alert(data.message);
+                    }
+                }
+            });
+        };
+
+        function getUrlParam(name) {
+            var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)"); //构造一个含有目标参数的正则表达式对象
+            var r = window.location.search.substr(1).match(reg); //匹配目标参数
+            if (r != null) return unescape(r[2]);
+            return null; //返回参数值
+        }
+    });
+</script>
+
+</html>

@@ -1,0 +1,329 @@
+@import "../common/var";
+@c-f0:#f0f0f0;
+.xb-sidebar{
+    width: 170px;
+    position: fixed;
+    right: 30px;
+    top: 170px;
+    background: @fff;
+    border:2px solid #f9f9f9;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, .2);
+    padding: 2px;
+    z-index: 1000;
+    overflow: hidden;
+    .close{
+        width: 20px;
+        height: 20px;
+        position: absolute;
+        right: 10px;
+        top: 10px;
+        background: url(../../images/icon.png) -25px -1348px no-repeat;
+        cursor: pointer;
+    }
+    dl{
+        border-bottom: 1px solid @c-f0;
+        padding: 5px 10px;
+        &.download{
+            line-height: 40px;
+            padding: 0 15px;
+            dt{
+                padding: 5px 0;
+            }
+            .down-icon{
+                display: inline-block;
+                width: 40px;
+                height: 40px;
+                vertical-align: middle;
+                background: url(../../images/home-icon_02.png) -363px -91px no-repeat;
+                margin-right: 8px;
+            }
+            .down-btn{
+                width: 122px;
+                height: 38px;
+                background: @blue3;
+                text-indent: 50px;
+                color: @fff;
+                position: relative;
+                display: inline-block;
+                margin-left: 5px;
+                margin-bottom: 10px;
+                em{
+                    width: 38px;
+                    height: 38px;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    background: url(../../images/home-icon_02.png) -79px -40px no-repeat;
+                }
+            }
+        }
+        &.contact{
+            line-height: 1.8em;
+            dt{
+                position: relative;
+                margin-top: 5px;
+                em{
+                    width: 30px;
+                    height: 30px;
+                    display: inline-block;
+                    vertical-align: middle;
+                    background: url(../../images/home-icon_02.png) -411px -96px no-repeat;
+                }
+            }
+            dd{
+                a{
+                    color: @color999;
+                    font-size: 12px;
+                    padding-left: 36px;
+                    &:hover{
+                        color: @blue3;
+                    }
+                }
+            }
+        }
+        &.hot-game{
+            line-height: 1.8em;
+            dt{
+                position: relative;
+                margin-top: 5px;
+                em{
+                    width: 30px;
+                    height: 30px;
+                    display: inline-block;
+                    vertical-align: middle;
+                    background: url(../../images/home-icon_02.png) -86px -96px no-repeat;
+                    margin-right: 8px;
+                    &.icon-buy{
+                        background-position: -86px -137px;
+                    }
+                }
+            }
+            dd{
+                font-size: 12px;
+                padding-left: 38px;
+                a{
+                    color: @color999;
+                    font-size: 12px;
+                    display: inline-block;
+                    &:hover{
+                        color: @blue3;
+                    }
+                }
+            }
+        }
+        &.faq{
+            padding: 5px;
+            line-height: 2em;
+            text-align: center;
+            a{
+                margin-right: 10px;
+                display: inline-block;
+            }
+        }
+        &.accout{
+            line-height: 1.8em;
+            border-bottom: 0;
+            dt{
+                position: relative;
+                margin-top: 5px;
+                em{
+                    width: 30px;
+                    height: 30px;
+                    display: inline-block;
+                    vertical-align: middle;
+                    background: url(../../images/home-icon_02.png) -260px -96px no-repeat;
+                    margin-right: 8px;
+                }
+            }
+            dd{
+                font-size: 12px;
+                &.form-item{
+                    width: 150px;
+                    height: 24px;
+                    position: relative;
+                    border:1px solid #b5bbc6;
+                    margin: 5px 0;
+                    &:hover{
+                        .tip{
+                            display: block;
+                        }
+                    }
+                    .tip{
+                        position: absolute;
+                        display: none;
+                        width: 140px;
+                        bottom: 40px;
+                        left: -1px;
+                        padding: 5px;
+                        background: #d0ebff;
+                        border: 1px solid #b1b9be;
+                        .a-icon{
+                            width: 20px;
+                            height: 12px;
+                            position: absolute;
+                            bottom: -11px;
+                            left: 20px;
+                            background: url(../../images/home-icon_02.png) -470px -37px no-repeat;
+                            margin-right: 8px;
+                        }
+                        .hd{
+                            border-bottom: 1px solid #b1b9be;
+                            line-height: 25px;
+                            font-weight: bold;
+                            font-size: 14px;
+                            em{
+                                width: 20px;
+                                height: 20px;
+                                display: inline-block;
+                                vertical-align: middle;
+                                background: url(../../images/home-icon_02.png) -445px -141px no-repeat;
+                                margin-right: 2px;
+                            }
+                        }
+                        .bd{
+                            padding-top: 6px;
+                            line-height: 1.6em;
+                            color: @color999;
+                        }
+                    }
+                    input{
+                        width: 100px;
+                        line-height: 24px;
+                        height: 24px;
+                        border: 0;
+                        padding-left: 5px;
+                    }
+                    .submit{
+                        width: 35px;
+                        height: 26px;
+                        right: -1px;
+                        top: -1px;
+                        background: @blue3;
+                        color: @fff;
+                        text-align: center;
+                        cursor: pointer;
+                        position: absolute;
+                    }
+                }
+                &.result{
+                    font-weight: bold;
+                    padding: 5px 0 5px 37px;
+                    line-height: 1.4em;
+                    position: relative;
+                    display: none;
+                    em{
+                        width: 30px;
+                        height: 30px;
+                        position: absolute;
+                        left: 0px;
+                        top: 5px;
+                        background: url(../../images/home-icon_02.png) -432px -25px no-repeat;
+                    }
+                    &.error{
+                        em{
+                            background-position: -431px -56px ;
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
+}
+
+.xb-f-tool{
+    left: 0;
+    bottom: 0;
+    z-index: 10000;
+    position: fixed;
+    width: 100%;
+    .close{
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        right: 10px;
+        top:0px;
+        font-size: 24px;
+        color: @bd-e5;
+        cursor: pointer;
+        z-index: 1;
+    }
+    .w-full{
+        background-color: #000000 \9;
+        background-color: rgba(0, 0, 0, 0.8);
+        filter: Alpha(opacity=80);
+        *zoom: 1;
+    }
+    .w1200{
+        color: #000;
+        position: relative;
+        height: 114px;
+        padding: 5px 0;
+        overflow: hidden;
+        dl{
+            display: table;
+            width: 100%;
+        }
+        dt{
+            display: table-cell;
+            width: 118px;
+            height: 114px;
+            background: url(../../images/home-f-code.png) no-repeat center center;
+        }
+        dd{
+            display: table-cell;
+            padding-left: 40px;
+            vertical-align: middle;
+            line-height: 40px;
+            .mini-box{
+                line-height: 1.4em;
+                display: inline-block;
+                margin-left: 10px;
+                font-size: 12px;
+                vertical-align: middle;
+            }
+            .sh-btn{
+                line-height: 28px;
+                width: 70px;
+                text-align: center;
+                font-weight: bold;
+                border-radius: 3px;
+                font-size: 14px;
+            }
+            a{
+                color: @fff;
+                &:hover{
+                    color: @blue3;
+                }
+            }
+            em{
+                width: 30px;
+                height: 30px;
+                display: inline-block;
+                margin-right: 5px;
+                background: url(../../images/home-icon_3.png) no-repeat center center;
+                vertical-align: middle;
+                &.xb-icon{
+                    background-position: -59px -312px;
+                }
+                &.cj-icon{
+                    background-position: -21px -268px;
+                }
+                &.qq-icon{
+                    background-position: -21px -313px;
+                }
+                &.wq-icon{
+                    background-position: -250px -262px;
+                }
+                &.dl-icon{
+                    background-position: -56px -268px;
+                }
+                &.shq-icon{
+                    background: url(../../images/home-icon_02.png) -363px -91px no-repeat;
+                    width: 40px;
+                    height: 40px;
+                }
+            }
+        }
+    }
+}

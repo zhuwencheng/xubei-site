@@ -1,0 +1,247 @@
+.sc-position {
+  line-height: 40px;
+  text-indent: 20px;
+  color: #555;
+}
+.sc-position a {
+  color: #555;
+}
+.sc-hd01 {
+  line-height: 70px;
+  overflow: hidden;
+  height: 70px;
+  font-weight: bold;
+  font-size: 18px;
+}
+.sc-hd01 .more {
+  float: right;
+  color: #555;
+  font-weight: normal;
+  font-size: 14px;
+}
+.sc-hd01 .icon {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin-right: 5px;
+  margin-top: -4px;
+  background: center center no-repeat url(../images/tup.png);
+  vertical-align: middle;
+}
+.sc-hd01 .icon.steam {
+  background-position: 1px center;
+}
+.sc-hd01 .icon.pc {
+  background-position: -36px center;
+}
+.sc-hd01 .icon.phone {
+  background-position: -71px center;
+  width: 32px;
+}
+.sc-hd02 {
+  height: 40px;
+  line-height: 40px;
+  background: #e8e8e8;
+  margin-bottom: 20px;
+}
+.sc-hd02 span {
+  display: block;
+  float: left;
+  width: 125px;
+  text-align: center;
+  font-size: 16px;
+  cursor: pointer;
+  border-right: 1px solid #e2e2e2;
+}
+.sc-hd02 span.active,
+.sc-hd02 span:hover {
+  color: #fff;
+  border-right-color: #2091dd;
+  background: #2091dd;
+  font-weight: bold;
+}
+.steam-center .bd {
+  width: 1210px;
+  margin-left: -5px;
+  overflow: hidden;
+  padding-top: 5px;
+}
+.steam-center .bd dl {
+  width: 262.5px;
+  float: left;
+  background: #fff;
+  margin: 0 5px 15px;
+  text-align: center;
+  padding: 15px;
+  padding-bottom: 0;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+.steam-center .bd dl:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.steam-center .bd dl dt img {
+  width: 100%;
+  height: 130px;
+}
+.steam-center .bd dl dd {
+  display: table;
+  width: 100%;
+}
+.steam-center .bd dl dd a {
+  display: table-cell;
+  vertical-align: middle;
+  line-height: 30px;
+  height: 75px;
+}
+.pc-center .bd {
+  width: 1220px;
+  margin-left: -10px;
+  overflow: hidden;
+  padding-top: 5px;
+}
+.pc-center .bd dl {
+  width: 265px;
+  float: left;
+  background: #fff;
+  margin: 0 10px 20px;
+  text-align: center;
+  padding: 10px;
+  padding-bottom: 0;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+.pc-center .bd dl:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.pc-center .bd dl dt img {
+  width: 100%;
+  height: 120px;
+}
+.pc-center .bd dl dd {
+  line-height: 45px;
+  height: 45px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.pc-center .bd dl dd.key {
+  border-top: #ebebeb 1px solid;
+  overflow: hidden;
+}
+.pc-center .bd dl dd.key a {
+  display: inline-block;
+  line-height: 18px;
+  height: 18px;
+  border: 1px solid #e5e5e5;
+  border-radius: 100px;
+  padding: 0 8px;
+  margin: 0 2.5px;
+  vertical-align: middle;
+  font-size: 12px;
+}
+.pc-center .bd dl dd.key a:hover {
+  background-color: #1e93db;
+  border-color: #1e93db;
+  color: #fff;
+}
+.phone-center .bd {
+  overflow: hidden;
+  border-right: 1px solid #ebebeb;
+  border-bottom: 1px solid #ebebeb;
+}
+.phone-center .bd dl {
+  width: 238.8px;
+  float: left;
+  background: #fff;
+  text-align: center;
+  border-left: 1px solid #ebebeb;
+  border-top: 1px solid #ebebeb;
+}
+.phone-center .bd dl:hover {
+  background: #f6fafe;
+}
+.phone-center .bd dl dt {
+  padding-top: 29px;
+  padding-bottom: 10px;
+}
+.phone-center .bd dl dt img {
+  width: 80px;
+  height: 80px;
+  border-radius: 12px;
+  margin: 0 auto;
+}
+.phone-center .bd dl dd {
+  line-height: 40px;
+}
+.phone-center .bd dl dd.key {
+  overflow: hidden;
+  padding-bottom: 10px;
+  height: 40px;
+}
+.phone-center .bd dl dd.key a {
+  display: inline-block;
+  line-height: 18px;
+  height: 18px;
+  border: 1px solid #e5e5e5;
+  border-radius: 100px;
+  padding: 0 8px;
+  margin: 0 2.5px;
+  vertical-align: middle;
+  font-size: 12px;
+}
+.phone-center .bd dl dd.key a:hover {
+  background-color: #1e93db;
+  border-color: #1e93db;
+  color: #fff;
+}
+.tj-center {
+  margin-top: 55px;
+}
+.tj-center .bd {
+  width: 1212.5px;
+  margin-left: -5px;
+  overflow: hidden;
+  padding-top: 5px;
+}
+.tj-center .bd dl {
+  width: 260px;
+  float: left;
+  background: #fff;
+  margin: 0 6.25px 15px;
+  text-align: center;
+  padding: 15px;
+  padding-bottom: 0;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+.tj-center .bd dl:hover {
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+.tj-center .bd dl dt img {
+  width: 100%;
+  height: 170px;
+}
+.tj-center .bd dl dd {
+  width: 100%;
+  text-align: left;
+  height: 60px;
+  padding: 8px 0;
+  overflow: hidden;
+}
+.tj-center .bd dl dd span {
+  color: #208fdd;
+}
+.tj-center .bd dl dd a {
+  line-height: 30px;
+}
+.tj-center .bd dl dd.money {
+  text-align: center;
+  font-size: 22px;
+  font-weight: bold;
+  border-top: 1px solid #ebebeb;
+  height: 55px;
+  padding: 0;
+}
+.tj-center .bd dl dd.money a {
+  color: #f00;
+  line-height: 55px;
+  height: 55px;
+}

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="王者荣耀租号，王者荣耀租号平台，王者荣耀租号，租号玩">
+    <meta name="description" content="虚贝网是国内专业的王者荣耀账号交易平台，提供全区全服王者荣耀游戏账号交易，数千个高性价比账号供您选择，买号就来虚贝网！">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="renderer" content="webkit" />
+    <title>王者荣耀租号_王者荣耀租号平台_王者荣耀租号_租号玩_虚贝网</title>
+    <link type="image/x-icon" rel="shortcut icon" href="//static.xubei.com/assets/images/fav-icon.png">
+    <link rel="stylesheet" href="./css/common/basic.css">
+    <link rel="stylesheet" href="./css/lease_success_xa.css">
+</head>
+<body>
+<div class="hx-component-header" data-des="组件" activenav="2"></div>
+<div class="main w1200">
+    <!-- 路径导航 -->
+    <div class="nav">
+        <ul>
+            <li><a href="http://www.xubei.com/">首页 ></a></li>
+            <li> &nbsp;支付成功 </li>
+            <!--<li><a href="#">王者荣耀 ></a></li>
+            <li><a href="#">安卓系统/QQ账号</a></li>-->
+        </ul>
+    </div>
+
+    <!-- 订单内容 -->
+    <div class="content">
+        <div class="content-l">
+
+        </div>
+        <div class="content-r">
+            <div class="description">
+            </div>
+        </div>
+    </div>
+
+
+
+</div>
+
+<div class="hx-component-footer" data-des="组件"></div>
+
+</body>
+<script src="./js/lib/require.min.js"></script>
+<script src="./js/re-config.js"></script>
+<script src="./js/lease_success_xa.js"></script>
+<script type="text/html" id="product-info">
+    {{if order_status_text2 == 1}}
+    <div class="login-info">
+        <div class="x-title">
+            <span></span>
+            <p class="x-success">租赁成功</p>
+            <a href="http://www.xubei.com/user/buyer/listRentOrder.htm?orderNo={{order_no}}">查看我租赁的商品</a>
+        </div>
+        <div class="qu">您租赁的账号： <span>{{game_all_name}}</span><a href="http://static.xubei.com/common/rights.html?businessNo=xubei&orderNo={{order_no}}">申请维权</a></div>
+        <div class="information">
+            <p>您的登录信息如下：</p>
+            <div>
+                <p>游戏账号：<span class="red">{{game_account}}</span><a class="copy" href="javascript:;">复制</a></p>
+                <p class="pw">游戏密码：<span class="red">{{game_pwd}}</span><a class="copy" href="javascript:;">复制</a></p>
+            </div>
+        </div>
+    </div>
+    <div class="order-info">
+        <div class="tit x-fw">订单信息</div>
+        <div class="order">订单编号： <span>{{order_no}}</span></div>
+        <div class="time">租赁时间： <span>{{begin_time}}到{{end_time}}</span></div>
+        <div class="timeLong">租赁时长： <span>{{goods_count}}小时</span><a class="xuzu" href="javascript:;">我要续租</a></div>
+        <div class="tel">卖家手机号： <span>{{mobile}}</span></div>
+        <div class="QQ">卖家QQ号： <span>{{qq_number}}</span></div>
+    </div>
+    {{else}}
+    <div class="refund">
+        <div class="x-title">
+            <span></span>
+            <p class="x-success">退款成功</p>
+            <a href="http://www.xubei.com/user/buyer/listRentOrder.htm?orderNo={{order_no}}">查看我租赁的商品</a>
+        </div>
+        <div class="txt">
+            <p class="one f16">退款原因：商品同一时间已被其他人租赁</p>
+            <p class="two f12">*支付金额已经返回到您的虚贝账户中</p>
+        </div>
+        <div class="xuZuBtn">
+            <a href="./shopList.html">继续租赁</a>
+        </div>
+    </div>
+    {{/if}}
+
+
+
+
+
+</script>
+</html>

@@ -1,0 +1,75 @@
+@import "../common/var.less";
+/*分页*/
+.xb-pagination{
+  padding: 10px 0;
+  font-size: 12px;
+  .page-numtext{
+    float: left;
+    font-size: 12px;
+    line-height: 30px;
+  }
+  &.hasborder{
+    span{
+      border-color: #e1e3e8 ;
+    }
+  }
+  span{
+    line-height: 38px;
+    border: 1px solid @bd-e5;
+    margin-right: -1px;
+    background: @fff;
+    display: inline-block;
+    padding: 0 15px;
+    color: @color666;
+    text-align: center;
+    &:hover{
+      background: @blue3;
+      color: #fff;
+      cursor: pointer;
+    }
+    &.disabled{
+      &:hover{
+        cursor: not-allowed;
+        background: @fff;
+        color: @color666;
+      }
+    }
+  }
+  &.linepage{
+    span{
+      border-color: @borderColor  !important;
+    }
+  }
+  .pre,.next{
+    width: 98px;
+    padding: 0;
+  }
+  .num{
+    width: auto;
+    min-width: 28px;
+    padding: 0 5px;
+    &.active{
+      background: @blue3;
+      border-color: @blue3;
+      color: #fff;
+      cursor: default;
+    }
+  }
+  .pre{
+    &.disabled{
+      color: @color999;
+      &:hover{
+        cursor: not-allowed;
+      }
+    }
+  }
+  .next{
+    &.disabled{
+      color: @color999;
+      &:hover{
+        cursor: not-allowed;
+      }
+    }
+  }
+}
+/*分页 end*/

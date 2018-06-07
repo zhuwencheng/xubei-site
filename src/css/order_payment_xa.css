@@ -1,0 +1,198 @@
+.main {
+  background-color: #F6F6F6;
+  /* 路径导航 */
+  /* 订单提示 */
+  /* 支付选择 */
+}
+.main > .nav {
+  width: 1185px;
+  height: 40px;
+  line-height: 40px;
+  padding-left: 15px;
+  background-color: #f6f6f6;
+}
+.main > .nav > ul > li {
+  float: left;
+}
+.main > .prompt {
+  width: 100%;
+  height: 160px;
+  background-color: #fff;
+  box-sizing: border-box;
+  padding: 0 20px;
+  position: relative;
+}
+.main > .prompt > .icon {
+  margin-top: 33px;
+  margin-right: 20px;
+  float: left;
+  width: 35px;
+  height: 35px;
+  background: url("../images/icon.png") 53px 1454px;
+}
+.main > .prompt > .txt {
+  float: left;
+  margin-top: 35px;
+}
+.main > .prompt > .txt > .t1 {
+  font-size: 16px;
+  font-weight: bold;
+  padding-left: 5px;
+  color: #333;
+  line-height: 20px;
+  margin-bottom: 16px;
+}
+.main > .prompt > .txt .t2 {
+  max-width: 500px;
+  max-height: 40px;
+  overflow: hidden;
+}
+.main > .prompt > .money {
+  position: absolute;
+  top: 110px;
+  left: 46px;
+}
+.main > .prompt > .money > p {
+  float: left;
+  font-size: 16px;
+  margin-left: 30px;
+}
+.main > .payChoice {
+  background-color: #fff;
+}
+.main > .payChoice > .tit {
+  height: 60px;
+  width: 100%;
+  background-color: #F6F6F6;
+  border-bottom: 1px solid #EFEFEF;
+  overflow: hidden;
+}
+.main > .payChoice > .tit > .box {
+  width: 120px;
+  height: 40px;
+  background-color: #fff;
+  margin-top: 20px;
+  line-height: 40px;
+  text-align: center;
+}
+.main > .payChoice > .balance {
+  height: 95px;
+  width: 100%;
+  box-sizing: border-box;
+  padding-left: 30px;
+  border-bottom: 1px solid #e2e2e2;
+}
+.main > .payChoice > .balance > .b1 {
+  margin-top: 35px;
+  margin-right: 70px;
+}
+.main > .payChoice > .balance > .b2 {
+  margin-top: 38px;
+}
+.main > .payChoice > .balance > .b2 > input {
+  vertical-align: middle;
+  cursor: pointer;
+}
+.main > .payChoice > .pay {
+  width: 100%;
+  height: 320px;
+  border-bottom: 1px solid #EFEFEF;
+}
+.main > .payChoice > .pay > .choicePay {
+  box-sizing: border-box;
+  width: 100%;
+  height: 328px;
+  background-color: #fff;
+  padding: 46px 0 0 35px;
+}
+.main > .payChoice > .pay > .choicePay > input {
+  cursor: pointer;
+  transform: scale(1.5, 1.5);
+}
+.main > .payChoice > .pay > .choicePay > label span {
+  display: inline-block;
+  width: 146px;
+  height: 60px;
+  margin-right: 50px;
+  margin-left: 15px;
+  vertical-align: -20px;
+  background: url("../images/icon-zfb.png") no-repeat;
+  border: 2px solid #C0C0C0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.main > .payChoice > .pay > .choicePay > .x-weixin span {
+  background: url("../images/icon-wx.png") no-repeat;
+}
+.main > .payChoice > .pay > .choicePay > .x-qq span {
+  background: url("../images/icon-qq.png") no-repeat;
+}
+.main > .payChoice > .pay > .choicePay > .passWord {
+  margin-top: 65px;
+}
+.main > .payChoice > .pay > .choicePay > .passWord > span {
+  line-height: 40px;
+}
+.main > .payChoice > .pay > .choicePay > .passWord > input {
+  width: 205px;
+  height: 40px;
+  border: 1px solid #999;
+  line-height: 40px;
+  box-sizing: border-box;
+  padding: 0 10px;
+}
+.main > .payChoice > .pay > .choicePay .payBtn {
+  display: inline-block;
+  width: 150px;
+  height: 40px;
+  margin-left: 74px;
+  background-color: #488DFB;
+  color: #fff;
+  text-align: center;
+  line-height: 40px;
+  margin-top: 40px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.main > .payChoice > .pay > .choicePay .error {
+  margin-left: 10px;
+}
+#tanchang {
+  width: 300px;
+  height: 200px;
+  background-color: #fbfbfd;
+  position: absolute;
+  z-index: -100000;
+  top: 30%;
+  left: 50%;
+  margin-left: -200px;
+  border-radius: 5px;
+  box-shadow: 0px 5px 20px 0px #767676;
+  text-align: center;
+}
+#tanchang > span {
+  display: inline-block;
+  width: 38px;
+  height: 38px;
+  background: url("../images/wor.png") no-repeat;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+#tanchang > p {
+  font-size: 18px;
+  display: inline-block;
+  margin-top: 50px;
+}
+#tanchang > a {
+  display: block;
+  width: 120px;
+  height: 40px;
+  background-color: #208fdd;
+  color: #fff;
+  text-align: center;
+  font-size: 16px;
+  line-height: 40px;
+  border-radius: 5px;
+  margin: 0 auto;
+  margin-top: 35px;
+}

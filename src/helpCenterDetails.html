@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="renderer" content="webkit" />
+    <title>租号平台_租号玩_虚贝网</title>
+    <meta http-equiv="keywords" content="LOL租号，LOL租号平台，英雄联盟租号，租号玩">
+    <meta http-equiv="description" content="虚贝网是国内专业的LOL租号平台，提供全区全服英雄联盟 游戏账号出租，上万个高端极品账号供您选择，想要租号玩就来虚贝网！">
+    <link rel="icon" href="//static.xubei.com/assets/images/fav-icon.png" />
+    <link href="./css/common/basic.css" rel="stylesheet" type="text/css">
+    <link href="./css/lib/pager.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="./css/helpCenterDetails.css">
+</head>
+
+<body>
+<div class="xb-component-header" data-des="组件" activeNav="0"></div>
+<div class="main w1200">
+
+    <!-- 路径导航 B -->
+    <div class="nav">
+        <ul>
+            <li>首页 >> </li>
+            <li>帮助中心 >> </li>
+            <li class="lastNav">常见问题 </li>
+            <li class="lastNav2" style="color: #208fde;"></li>
+        </ul>
+        <div class="search">
+            <input class="fl" type="text" placeholder="输入关键字：如余额">
+            <div class="btn fl"></div>
+        </div>
+    </div>
+    <!-- 路径导航 E -->
+
+    <!-- 主体内容 B -->
+    <div class="content">
+        <!-- 左边tab栏 B -->
+        <div class="content-l">
+            <div class="tit">帮助中心</div>
+            <ul>
+
+            </ul>
+        </div>
+        <!-- 左边tab栏 E -->
+
+        <!-- 右边列表 B -->
+        <div class="content-r">
+            <div class="list">
+                <div class="tit"></div>
+                <div class="time"></div>
+                <div class="r-content"></div>
+            </div>
+            <div class="xb-pagination t-r mgt-30" id="page1">
+            </div>
+        </div>
+
+        <!-- 右边列表 E -->
+
+    </div>
+    <!-- 主体内容 E -->
+</div>
+
+
+
+<div class="xb-component-footer" data-des="组件"></div>
+</body>
+<script src="./js/lib/require.min.js"></script>
+<script src="./js/xb-home-config.js"></script>
+<script src="./js/helpCenterDetails.js"></script>
+<script id="queryCommonMenu" type="text/x-handlebars-template">
+    {{each result as item i}}
+    <li><a href="/helpCenterContent.html?menuId={{item.menu_id}}"><span></span><i class="icon{{item.menu_id}}"></i>{{item.menu_name}}</a></li>
+    {{/each}}
+</script>
+<script id="detailsContent" type="text/x-handlebars-template">
+
+</script>
+<script id="keyWordTitle" type="text/x-handlebars-template">
+    <ul class="keyWordsUl">
+        {{each list as item i}}
+        <li>
+            <div class="tit">
+                <span class="spot"></span>
+                <a target="_blank" href="./helpCenterDetails.html?menuId={{item.menu_id}}&articleId={{item.article_id}}"></a>
+            </div>
+            <div class="keyContent">
+            </div>
+        </li>
+        {{/each}}
+    </ul>
+</script>
+</html>

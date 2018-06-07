@@ -1,0 +1,272 @@
+.xb-toptoolbar {
+  line-height: 40px;
+  height: 40px;
+  background: #f5f5f5;
+  overflow: hidden;
+}
+.xb-toptoolbar .hot-link {
+  display: inline-block;
+}
+.xb-toptoolbar .hot-link a {
+  margin: 0 20px;
+}
+.xb-topfilterbar {
+  height: 90px;
+  z-index: 1000;
+  position: relative;
+}
+.xb-topfilterbar .xb-logo {
+  width: 280px;
+  height: 65px;
+  line-height: 65px;
+  text-indent: 10000px;
+  overflow: hidden;
+  margin-top: 12.5px;
+  background: url(../../images/home-icon_01.png) no-repeat -42px -188px;
+}
+.xb-topfilterbar .search {
+  width: 724px;
+  height: 33px;
+  border: 1px solid #b5bbc4;
+  margin-top: 27.5px;
+  font-size: 12px;
+  color: #999;
+  position: relative;
+}
+.xb-topfilterbar .search .s-icon {
+  width: 35px;
+  height: 35px;
+  position: absolute;
+  right: -1px;
+  top: -1px;
+  background: #208fdd url(../../images/home-icon_02.png) no-repeat -308px -175px;
+  cursor: pointer;
+}
+.xb-topfilterbar .search input[type=text] {
+  border: 0;
+  margin-left: 15px;
+  line-height: 33px;
+  height: 33px;
+  width: 205px;
+  font-size: 12px;
+}
+.xb-topfilterbar .search .down-icon {
+  width: 10px;
+  height: 10px;
+  float: right;
+  margin-top: 3px;
+  margin-left: 25px;
+  background: url(../../images/home-icon_02.png) no-repeat -465px -188px;
+}
+.xb-topfilterbar .search .filter-box {
+  height: 18px;
+  line-height: 18px;
+  margin-left: 15px;
+  border-right: 1px solid #d6d6d6;
+  display: inline-block;
+  padding-right: 10px;
+  vertical-align: middle;
+  cursor: pointer;
+}
+.xb-topfilterbar .search .filter-box .s-value {
+  display: inline-block;
+  width: 5em;
+  height: 18px;
+  overflow: hidden;
+}
+.xb-topfilterbar .search .filter-box .s-value.s-v-xs {
+  width: 3em;
+  height: 18px;
+  overflow: hidden;
+}
+.xb-topfilterbar .search .filter-box.s-type {
+  position: relative;
+}
+.xb-topfilterbar .search .filter-box.s-type .t-select {
+  width: 75px;
+  left: -15px;
+  line-height: 2.4em;
+  top: 33px;
+  text-align: center;
+}
+.xb-topfilterbar .search .filter-box.s-type .t-select p:hover {
+  color: #208fdd;
+}
+.xb-topfilterbar .search .filter-box.s-game .t-select .arraw {
+  left: 115px;
+}
+.xb-topfilterbar .search .filter-box.s-area .t-select .arraw {
+  left: 255px;
+}
+.xb-topfilterbar .search .filter-box.s-server .t-select .arraw {
+  left: 355px;
+}
+.xb-topfilterbar .search .filter-box .t-select {
+  width: 712px;
+  border: 2px solid #208fdd;
+  position: absolute;
+  left: -1px;
+  display: none;
+  top: 43px;
+  background: #fff;
+  padding: 5px;
+}
+.xb-topfilterbar .search .filter-box .t-select .arraw {
+  width: 17px;
+  height: 8px;
+  top: -8px;
+  left: 10px;
+  position: absolute;
+  background: url(../../images/home-icon_02.png) -426px -186px no-repeat;
+}
+.xb-topfilterbar .search .filter-box .t-select .g-filter {
+  line-height: 26px;
+  background: #f9f9f9;
+  overflow: hidden;
+  margin-bottom: 10px;
+}
+.xb-topfilterbar .search .filter-box .t-select .g-filter > span {
+  display: block;
+  float: left;
+  padding: 0 10px;
+  background: #208fdd;
+  color: #fff;
+}
+.xb-topfilterbar .search .filter-box .t-select .g-filter > em {
+  display: block;
+  float: left;
+  padding: 0 8px;
+  color: #333;
+}
+.xb-topfilterbar .search .filter-box .t-select .g-filter > em:hover,
+.xb-topfilterbar .search .filter-box .t-select .g-filter > em.active {
+  background: #47adf5;
+  color: #fff;
+}
+.xb-topfilterbar .search .filter-box .t-select .g-bd {
+  overflow: hidden;
+  zoom: 1;
+  line-height: 30px;
+  min-height: 200px;
+}
+.xb-topfilterbar .search .filter-box .t-select .g-bd span {
+  display: block;
+  float: left;
+  width: 19%;
+  padding-left: 1%;
+}
+.xb-topfilterbar .search .filter-box .t-select .g-bd span:hover,
+.xb-topfilterbar .search .filter-box .t-select .g-bd span.active {
+  color: #208fdd;
+}
+.xb-topnav {
+  background: #208fdd;
+  line-height: 50px;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  height: 50px;
+  z-index: 1;
+  position: relative;
+}
+.xb-topnav .w1200 > a {
+  color: #fff;
+  line-height: 50px;
+  display: inline-block;
+  width: 130px;
+  text-align: center;
+  float: left;
+  position: relative;
+}
+.xb-topnav .w1200 > a:hover,
+.xb-topnav .w1200 > a.active {
+  background: #36a3ef;
+}
+.xb-topnav .w1200 > a .tip {
+  font-size: 12px;
+  position: absolute;
+  line-height: 19px;
+  color: #fff;
+  padding: 0 5px;
+  background: #ef9d00;
+  margin-left: 5px;
+  top: 10px;
+  border-radius: 100px;
+  font-weight: normal;
+  width: 50px;
+  z-index: 1;
+}
+.xb-topnav .hot-game {
+  width: 224px;
+  background: #47adf5;
+  display: inline-block;
+  float: left;
+  text-indent: 28px;
+  position: relative;
+  cursor: pointer;
+  z-index: 10;
+}
+.xb-topnav .hot-game .hot-list {
+  position: absolute;
+  border: 1px solid #208fdd;
+  padding: 10px 10px;
+  width: 655px;
+  background: #fff;
+  top: 0;
+  right: -677px;
+  display: none;
+  transition: all ease 0.3s;
+  font-weight: normal;
+  font-size: 14px;
+  text-indent: 0;
+  line-height: 30px;
+}
+.xb-topnav .hot-game .hot-list a {
+  display: inline-block;
+  line-height: 30px;
+  height: 30px;
+  width: 90px;
+  padding: 0 10px;
+  overflow: hidden;
+  margin-right: 22px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  margin-bottom: 5px;
+}
+.xb-topnav .hot-game .hot-list a.active {
+  background: #208fdd;
+  color: #fff;
+  border-radius: 3px;
+}
+.xb-topnav .hot-game:hover .hot-list {
+  display: block;
+}
+.xb-topnav .hot-game .hot-icon {
+  display: inline-block;
+  background: url(../../images/home-icon_02.png) no-repeat -13px -16px;
+  width: 30px;
+  height: 30px;
+  vertical-align: middle;
+  margin-right: 5px;
+}
+.xb-topnav .hot-game .more-icon {
+  display: inline-block;
+  background: url(../../images/home-icon_02.png) no-repeat -385px -202px;
+  width: 30px;
+  height: 30px;
+  vertical-align: middle;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+}
+.xb-top-ad {
+  background: center center no-repeat;
+  position: relative;
+}
+.xb-top-ad a {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}

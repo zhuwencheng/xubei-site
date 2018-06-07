@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name=description>
+    <meta http-equiv=X-UA-Compatible content="IE=edge,chrome=1">
+    <meta name=renderer content=webkit>
+    <meta http-equiv=keywords content=LOL租号，LOL租号平台，英雄联盟租号，租号玩>
+    <meta http-equiv=description content="虚贝网是国内专业的LOL租号平台，提供全区全服英雄联盟 游戏账号出租，上万个高端极品账号供您选择，想要租号玩就来虚贝网！">
+    <title>订单详情_租号玩_虚贝网</title>
+    <link rel="icon" href="http://static.xubei.com/assets/images/fav-icon.png" />
+    <link href="../css/common/basic.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="../css/common/uc-basic.css" type="text/css">
+    <link rel="stylesheet" href="../css/orderDetail.css" type="text/css">
+</head>
+
+<body>
+    <div class="hx-component-header" data-des="组件" activeNav="2"></div>
+    <div class="w1200 uc-position">虚贝游戏平台 > 商品发布 > 商品详情</div>
+    <div class="w1200 uc-main">
+        <div class="xb-component-ucsider" data-des="组件" activeNav="ucs-leaseorder"></div>
+        <div class="uc-r-main">
+        </div>
+    </div>
+    <div class="hx-component-footer" data-des="组件"></div>
+    <script src="../js/lib/require.min.js"></script>
+    <script src="../js/uc-config.js"></script>
+    <script src="../js/orderDetail.js"></script>
+    
+    <script id="tpl_unpay" type="text/x-handlebars-template">
+        <div class="unPay">
+            <div class="progress">
+                <ul class="clearfix">
+                    <li class="text active">
+                        <span>1.支付</span>
+                    </li>
+                    <li class="line"></li>
+                    <li class="text">
+                        <span>2.上号器游戏</span>
+                    </li>
+                    <li class="line"></li>
+                    <li class="text">
+                        <span>3.交易完成</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="title">
+                <div class="text">
+                    <i></i>
+                    <h2>当前状态：
+                        <span class="payMgs">待付款</span>
+                    </h2>
+                    <div class="operation">您可以
+                        <a class="goPay" id="goPay" href="javascript:;">去支付</a>
+                        <a class="cancelOrder" href="javascript:;">取消订单</a>
+                    </div>
+                    <p>该订单会为您保持30分钟（从下单时间算起），30分钟之后如果还未付款，系统将会自动关闭订单</p>
+                </div>
+            </div>
+            <div class="list_mgs">
+                <h2>订单信息</h2>
+                <div class="orderMgs">
+                    <ul class="orderList1">
+                        <li>订单编号：
+                            <span class="orderColorRed">{{order_no}}</span>
+                        </li>
+                        <li>商品编号：{{goods_code}}</li>
+                        <li>下单时间：{{create_time}}</li>
+                        <li>上号方式：
+                            <span class="orderColorRed">{{game_login_mode}}</span>
+                        </li>
+                    </ul>
+                    <ul class="orderList2">
+                        <li>订单押金：{{foregift_amount}}</li>
+                        <li>订单金额：{{amount}}元</li>
+                        <li>实际付款：{{actual_amount}}元</li>
+                        <!-- <li>游戏账号：
+                            <span class="orderColorRed">{{game_account}}</span>
+                        </li> -->
+                    </ul>
+                    <ul class="orderList3">
+                        <li>卖家QQ号：</li>
+                        <li>卖家手机号：</li>
+                        <li>租赁时间：{{begin_time}}到{{end_time}}</li>
+                        <!-- <li>游戏密码：
+                            <span class="orderColorRed">{{game_pwd}}</span>
+                        </li> -->
+                    </ul>
+                </div>
+                <h2>商品信息</h2>
+                <div class="goodsMgs">
+                    <h3>【{{goods_title}}】</h3>
+                    <div class="panel clearfix">
+                        <p>游戏信息</p>
+                        <ul class="goodsList">
+                            {{each prototypelist as item i}}
+                            <li>{{item.key_name}}：{{item.value}}</li>
+                            {{/each}}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </script>
+    <script id="tpl_cancel" type="text/x-handlebars-template">
+        <div class="cancel">
+            <div class="progress">
+                <ul class="clearfix">
+                    <li class="text active">
+                        <span>1.支付</span>
+                    </li>
+                    <li class="line"></li>
+                    <li class="text">
+                        <span>2.上号器游戏</span>
+                    </li>
+                    <li class="line"></li>
+                    <li class="text">
+                        <span>3.交易完成</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="title">
+                <div class="text">
+                    <i></i>
+                    <h2>当前状态：
+                        <span class="payMgs">租赁取消</span>
+                    </h2>           
+                    <p class="reason">取消原因：买家主动取消</p>        
+                </div>
+            </div>
+            <div class="list_mgs">
+                <h2>订单信息</h2>
+                <div class="orderMgs">
+                    <ul class="orderList1">
+                        <li>订单编号：
+                            <span class="orderColorRed">{{order_no}}</span>
+                        </li>
+                        <li>商品编号：{{goods_code}}</li>
+                        <li>下单时间：{{create_time}}</li>
+                        <li>上号方式：
+                            <span class="orderColorRed">{{game_login_mode}}</span>
+                        </li>
+                    </ul>
+                    <ul class="orderList2">
+                        <li>订单押金：{{foregift_amount}}</li>
+                        <li>订单金额：{{amount}}元</li>
+                        <li>实际付款：{{actual_amount}}元</li>
+                        <!-- <li>游戏账号：
+                            <span class="orderColorRed">{{game_account}}</span>
+                        </li> -->
+                    </ul>
+                    <ul class="orderList3">
+                        <!-- <li>卖家QQ号：{{qq_number}}</li> -->
+                        <!-- <li>卖家手机号：{{mobile}}</li> -->
+                        <li>租赁时间：{{begin_time}}到{{end_time}}</li>
+                        <!-- <li>游戏密码：
+                            <span class="orderColorRed">{{game_pwd}}</span>
+                        </li> -->
+                    </ul>
+                </div>
+                <h2>商品信息</h2>
+                <div class="goodsMgs">
+                    <h3>【{{goods_title}}】</h3>
+                    <div class="panel clearfix">
+                        <p>游戏信息</p>
+                        <ul class="goodsList">
+                            {{each prototypelist as item i}}
+                            <li>{{item.key_name}}：{{item.value}}</li>
+                            {{/each}}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </script>
+    <script id="tpl_buyer" type="text/x-handlebars-template">
+        <div class="progress">
+            <ul class="clearfix">
+                <li class="text active">
+                    <span>1.支付</span>
+                </li>
+                <li class="line"></li>
+                <li class="text active">
+                    <span>2.上号器游戏</span>
+                </li>
+                <li class="line"></li>
+                <li class="text">
+                    <span>3.交易完成</span>
+                </li>
+            </ul>
+        </div>
+        <div class="title">
+            <div class="text">
+                <i></i>
+                <h2>当前状态：
+                    <span class="payMgs">支付成功</span>
+                    <!-- <span class="sqwq">申请维权</span> -->
+                </h2>
+            </div>
+        </div>
+        <div class="list_mgs">
+            <h2>订单信息</h2>
+            <div class="orderMgs">
+                <ul class="orderList1">
+                    <li>订单编号：
+                        <span class="orderColorRed">{{order_no}}</span>
+                    </li>
+                    <li>商品编号：{{goods_code}}</li>
+                    <li>下单时间：{{create_time}}</li>
+                    <li>上号方式：
+                        <span class="orderColorRed">{{game_login_mode}}</span>
+                    </li>
+                </ul>
+                <ul class="orderList2">
+                    <li>订单押金：{{foregift_amount}}</li>
+                    <li>订单金额：{{amount}}元</li>
+                    <li>实际付款：{{actual_amount}}元</li>
+                    <li>游戏账号：
+                        <span class="orderColorRed">{{game_account}}</span>
+                    </li>
+                </ul>
+                <ul class="orderList3">
+                    <li>卖家QQ号：{{qq_number}}</li>
+                    <li>卖家手机号：{{mobile}}</li>
+                    <li>租赁时间：{{begin_time}}到{{end_time}}</li>
+                    <li>游戏密码：
+                        <span class="orderColorRed">{{game_pwd}}</span>
+                    </li>
+                </ul>
+            </div>
+            <h2>商品信息</h2>
+            <div class="goodsMgs">
+                <h3>【{{goods_title}}】</h3>
+                <div class="panel clearfix">
+                    <p>游戏信息</p>
+                    <ul class="goodsList">
+                        {{each prototypelist as item i}}
+                        <li>{{item.key_name}}：{{item.value}}</li>
+                        {{/each}}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </script>
+    <script id="tpl_buyer_and" type="text/x-handlebars-template">
+        <div class="buyer_android">
+            <div class="progress">
+                <ul class="clearfix">
+                    <li class="text active">
+                        <span>1.支付</span>
+                    </li>
+                    <li class="line"></li>
+                    <li class="text active">
+                        <span>2.上号器游戏</span>
+                    </li>
+                    <li class="line"></li>
+                    <li class="text">
+                        <span>3.交易完成</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="title">
+                <div class="text">
+                    <i></i>
+                    <h2>当前状态：
+                        <span class="payMgs">支付成功</span>
+                    </h2>
+                </div>
+                <div class="qrcode">
+                    <div id="codes"></div>
+                    <span>请扫描二维码下载
+                        <a href="http://files.xubei.com/xubei-setup/%E8%99%9A%E8%B4%9D%E6%B8%B8%E6%88%8F%E4%B8%8A%E5%8F%B7%E5%99%A8_339_%E5%AE%89%E8%A3%85%E5%8C%85.exe">虚贝上号器</a>，打开上号器扫描订单二维码或直接输入订单号即可上号游戏！</span>
+                </div>
+            </div>
+            <div class="list_mgs">
+                <h2>租号使用方法示意图</h2>
+                <div class="imgDemo">
+                    <img src="../images/and_phone.jpg" alt="">
+                    <img src="../images/android.png" />
+                    <p>打开虚贝上号器直接手动输入订单号或扫描订单二维码即可上号游戏</p>
+                </div>
+                <h2>订单信息</h2>
+                <div class="orderMgs">
+                    <ul class="orderList1">
+                        <li>订单编号：
+                            <span class="orderColorRed">{{order_no}}</span>
+                        </li>
+                        <li>商品编号：{{goods_code}}</li>
+                        <li>下单时间：{{create_time}}</li>
+                        <li>上号方式：
+                            <span class="orderColorRed">{{game_login_mode}}</span>
+                        </li>
+                    </ul>
+                    <ul class="orderList2">
+                        <li>订单押金：{{foregift_amount}}</li>
+                        <li>订单金额：{{amount}}元</li>
+                        <li>实际付款：{{actual_amount}}元</li>
+                    </ul>
+                    <ul class="orderList3">
+                        <li>卖家QQ号：{{qq_number}}</li>
+                        <li>卖家手机号：{{mobile}}</li>
+                        <li>租赁时间：{{begin_time}}到{{end_time}}</li>
+                    </ul>
+                </div>
+                <h2>商品信息</h2>
+                <div class="goodsMgs">
+                    <h3>【{{goods_title}}】</h3>
+                    <div class="panel clearfix">
+                        <p>游戏信息</p>
+                        <ul class="goodsList">
+                            {{each prototypelist as item i}}
+                            <li>{{item.key_name}}：{{item.value}}</li>
+                            {{/each}}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </script>
+    <script id="tpl_buyer_ios" type="text/x-handlebars-template">
+        <div class="buyer_ios">
+            <div class="progress">
+                <ul class="clearfix">
+                    <li class="text active">
+                        <span>1.支付</span>
+                    </li>
+                    <li class="line"></li>
+                    <li class="text active">
+                        <span>2.上号器游戏</span>
+                    </li>
+                    <li class="line"></li>
+                    <li class="text">
+                        <span>3.交易完成</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="title">
+                <div class="text">
+                    <i></i>
+                    <h2>当前状态：
+                        <span class="payMgs">支付成功</span>
+                    </h2>
+                </div>
+                <div class="qrcode">
+                    <div id="codes"></div>
+                    <span>请用微信扫描订单二维码，并使用Safari打开即可登陆游戏！</span>
+                </div>
+            </div>
+            <div class="list_mgs">
+                <h2>租号使用方法示意图</h2>
+                <div class="imgDemo">
+                    <img src="../images/ios_phone.jpg" alt="">
+                    <img src="../images/apple.png" />
+                    <p>微信扫描二维码，并使用Safari打开即可登陆游戏</p>
+                </div>
+                <h2>订单信息</h2>
+                <div class="orderMgs">
+                    <ul class="orderList1">
+                        <li>订单编号：
+                            <span class="orderColorRed">{{order_no}}</span>
+                        </li>
+                        <li>商品编号：{{goods_code}}</li>
+                        <li>下单时间：{{create_time}}</li>
+                        <li>上号方式：
+                            <span class="orderColorRed">{{game_login_mode}}</span>
+                        </li>
+                    </ul>
+                    <ul class="orderList2">
+                        <li>订单押金：{{foregift_amount}}</li>
+                        <li>订单金额：{{amount}}元</li>
+                        <li>实际付款：{{actual_amount}}元</li>
+                    </ul>
+                    <ul class="orderList3">
+                        <li>卖家QQ号：{{qq_number}}</li>
+                        <li>卖家手机号：{{mobile}}</li>
+                        <li>租赁时间：{{begin_time}}到{{end_time}}</li>
+                    </ul>
+                </div>
+                <h2>商品信息</h2>
+                <div class="goodsMgs">
+                    <h3>【{{goods_title}}】</h3>
+                    <div class="panel clearfix">
+                        <p>游戏信息</p>
+                        <ul class="goodsList">
+                            {{each prototypelist as item i}}
+                            <li>{{item.key_name}}：{{item.value}}</li>
+                            {{/each}}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </script>
+    <script id="tpl_complete" type="text/x-handlebars-template">
+        <div class="progress">
+            <ul class="clearfix">
+                <li class="text active">
+                    <span>1.支付</span>
+                </li>
+                <li class="line"></li>
+                <li class="text active">
+                    <span>2.上号器游戏</span>
+                </li>
+                <li class="line"></li>
+                <li class="text active">
+                    <span>3.交易完成</span>
+                </li>
+            </ul>
+        </div>
+        <div class="title">
+            <div class="text">
+                <i></i>
+                <h2>当前状态：
+                    <span class="payMgs">交易完成</span>
+                </h2>
+            </div>
+        </div>
+        <div class="list_mgs">
+            <h2>订单信息</h2>
+            <div class="orderMgs">
+                <ul class="orderList1">
+                    <li>订单编号：
+                        <span class="orderColorRed">{{order_no}}</span>
+                    </li>
+                    <li>商品编号：{{goods_code}}</li>
+                    <li>下单时间：{{create_time}}</li>
+                    <li>上号方式：
+                        <span class="orderColorRed">{{game_login_mode}}</span>
+                    </li>
+                </ul>
+                <ul class="orderList2">
+                    <li>订单押金：{{foregift_amount}}</li>
+                    <li>订单金额：{{amount}}元</li>
+                    <li>实际付款：{{actual_amount}}元</li>
+                    <li>游戏账号：
+                        <span class="orderColorRed">{{game_account}}</span>
+                    </li>
+                </ul>
+                <ul class="orderList3">
+                    <li>卖家QQ号：{{qq_number}}</li>
+                    <li>卖家手机号：{{mobile}}</li>
+                    <li>租赁时间：{{begin_time}}到{{end_time}}</li>
+                    <li>游戏密码：
+                        <span class="orderColorRed">{{game_pwd}}</span>
+                    </li>
+                </ul>
+            </div>
+            <h2>商品信息</h2>
+            <div class="goodsMgs">
+                <h3>【{{goods_title}}】</h3>
+                <div class="panel clearfix">
+                    <p>游戏信息</p>
+                    <ul class="goodsList">
+                        {{each prototypelist as item i}}
+                        <li>{{item.key_name}}：{{item.value}}</li>
+                        {{/each}}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </script>
+    <script id="tpl_failure" type="text/x-handlebars-template">
+        <div class="failure_pay">
+            <div class="progress">
+                <ul class="clearfix">
+                    <li class="text active">
+                        <span>1.支付</span>
+                    </li>
+                    <li class="line"></li>
+                    <li class="text">
+                        <span>2.上号器游戏</span>
+                    </li>
+                    <li class="line"></li>
+                    <li class="text">
+                        <span>3.交易完成</span>
+                    </li>
+                </ul>
+            </div>
+            <div class="title">
+                <div class="text">
+                    <i></i>
+                    <h2>当前状态：
+                        <span class="payMgs">支付失败</span>
+                    </h2>
+                    <p class="descript">失败原因：
+                        <span class="orderColorRed">该商品已被出租</span>
+                    </p>
+                </div>
+            </div>
+            <div class="list_mgs">
+                <h2>订单信息</h2>
+                <div class="orderMgs">
+                    <ul class="orderList1">
+                        <li>订单编号：
+                            <span class="orderColorRed">{{order_no}}</span>
+                        </li>
+                        <li>商品编号：{{goods_code}}</li>
+                        <li>下单时间：{{create_time}}</li>
+                        <li>上号方式：
+                            <span class="orderColorRed">{{game_login_mode}}</span>
+                        </li>
+                    </ul>
+                    <ul class="orderList2">
+                        <li>订单押金：{{foregift_amount}}</li>
+                        <li>订单金额：{{amount}}元</li>
+                        <li>实际付款：{{actual_amount}}元</li>
+                        <li>游戏账号：
+                            <span class="orderColorRed">{{game_account}}</span>
+                        </li>
+                    </ul>
+                    <ul class="orderList3">
+                        <li>卖家QQ号：{{qq_number}}</li>
+                        <li>卖家手机号：{{mobile}}</li>
+                        <li>租赁时间：{{begin_time}}到{{end_time}}</li>
+                        <li>游戏密码：
+                            <span class="orderColorRed">{{game_pwd}}</span>
+                        </li>
+                    </ul>
+                </div>
+                <h2>商品信息</h2>
+                <div class="goodsMgs">
+                    <h3>【{{goods_title}}】</h3>
+                    <div class="panel clearfix">
+                        <p>游戏信息</p>
+                        <ul class="goodsList">
+                             {{each prototypelist as item i}}
+                                <li>{{item.key_name}}：{{item.value}}</li>
+                             {{/each}}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="王者荣耀租号，王者荣耀租号平台，王者荣耀租号，租号玩">
+    <meta name="description" content="虚贝网是国内专业的王者荣耀账号交易平台，提供全区全服王者荣耀游戏账号交易，数千个高性价比账号供您选择，买号就来虚贝网！">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="renderer" content="webkit" />
+    <title>王者荣耀租号_王者荣耀租号平台_王者荣耀租号_租号玩_虚贝网</title>
+    <link type="image/x-icon" rel="shortcut icon" href="//static.xubei.com/assets/images/fav-icon.png">
+    <link rel="stylesheet" href="./css/common/basic.css">
+    <link rel="stylesheet" href="./css/goods_details_xa.css">
+    <link rel="stylesheet" href="./css/lib/show.css">
+</head>
+
+<body>
+    <div class="xb-component-header" data-des="组件" activenav="2">
+    </div>
+    <div class="main w1200">
+        <!-- 路径导航 -->
+        <div class="nav">
+
+        </div>
+        <!-- 商品信息 -->
+        <div class="description">
+
+        </div>
+        <!-- 用户信息 -->
+        <div class="information"></div>
+    </div>
+    <div class="xb-component-footer" data-des="组件">
+    </div>
+</body>
+<script src="./js/lib/require.min.js"></script>
+<script src="./js/xb-home-config.js"></script>
+<script src="./js/goods_details_xa.js"></script>
+<script type="text/html" id="product-details">
+    <div class="desLeft">
+        <div id="preview" class="spec-preview">
+            {{if picture == null || picture == [] }}
+            <span class="jqzoom"><span></span>暂无图片资源</span>
+            {{else}}
+            <span class="jqzoom"><span></span><img jqimg="{{picture[0].location}}" src="{{picture[0].location}}"></span>
+            {{/if}}
+        </div>
+        <div class="spec-scroll">
+            <a class="prev"></a>
+            <a class="next"></a>
+            <div class="items">
+                <ul>
+                    {{if picture == null || picture == []}} {{else}} {{each picture as value i}}
+                    <li><img bimg="{{value.location}}" src="{{value.location}}" onmousemove="preview(this);"></li>
+                    {{/each}} {{/if}}
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="desRight">
+        <p class="tit">
+            <span class="red2">【{{detail.phone_type_text}}】</span>{{detail.goods_title}}
+        </p>
+        <div class="fuTit">
+            <div>
+                {{detail.game_all_name}}
+            </div>
+            <div class="bdsharebuttonbox">
+                <a href="#" class="bds_more" data-cmd="more"></a>
+                <a href="#" class="bds_qzone" data-cmd="qzone"></a>
+                <a href="#" class="bds_tsina" data-cmd="tsina"></a>
+                <a href="#" class="bds_tqq" data-cmd="tqq"></a>
+                <a href="#" class="bds_renren" data-cmd="renren"></a>
+                <a href="#" class="bds_weixin" data-cmd="weixin"></a>
+                <a href="#" class="bds_tieba" data-cmd="tieba"></a>
+                <a href="#" class="bds_sqq" data-cmd="sqq"></a>
+            </div>
+        </div>
+        <div class="time">
+            {{if detail.hour_lease == null}} {{else}}
+            <div class="one current" data-leaseType="1">
+                <p class="p-top">时租</p>
+                <p>{{detail.hour_lease}}元/时</p>
+                <span></span>
+            </div>
+            {{/if}} {{if detail.day_hours == null}} {{else}}
+            <div class="two" data-leaseType="2">
+                <p class="p-top">日租</p>
+                <p>{{detail.day_hours}}元/天</p>
+                <span></span>
+            </div>
+            {{/if}} {{if detail.week_lease == null}} {{else}}
+            <div class="three" data-leaseType="3">
+                <p class="p-top">周租</p>
+                <p>{{detail.week_lease}}元/周</p>
+                <span></span>
+            </div>
+            {{/if}} {{if detail.ten_hours == null}} {{else}}
+            <div class="four" data-leaseType="4">
+                <p class="p-top">10小时畅玩</p>
+                <p>{{detail.ten_hours}}元/次</p>
+                <span></span>
+            </div>
+            {{/if}}
+        </div>
+        <div class="deposit">
+            <p>
+                租号押金：<span class="blue">{{detail.foregift}}</span>元（订单结束后48小时退还）
+            </p>
+            <p>
+                租号限制：起租时间<span id="shortLease">{{detail.short_lease}}</span>小时
+            </p>
+            <p class="baoZhang">
+                服务保障： {{if detail.signseller == 1}}
+                <span class="yue">签</span> {{else}} {{/if}} {{if detail.stickorder == 1}}
+                <span class="pei">荐</span> {{else}} {{/if}}
+            </p>
+            <p>
+                上号方式：<span class="red2">{{detail.is_show_text}}</span>
+            </p>
+        </div>
+        <div class="prompt red2">
+            *温馨提示：禁止使用外挂否则将扣除全部租金和押金
+        </div>
+        <div class="num">
+            <span class="tit">数量：</span>
+            <div class="gw_num">
+                <span class="jian">-</span><input type="text" disabled class="cNum"><span class="add">+</span>
+            </div>
+            <a href="#" class="zu">立即租赁</a>
+            <!--<a href="#" class="upLoad">租号使用方法</a>-->
+        </div>
+        <div class="discount red2">
+            优惠活动：{{detail.actity}}
+        </div>
+        <div class="xuLine">
+        </div>
+        <div class="liuCheng">
+            <div class="tit">
+                租赁流程：
+            </div>
+            <div class="lcImg">
+                <p class="lcOne"><span class="blue x-fw">挑选</span><br>心仪账号</p>
+                <p class="lcTwo"><span class="blue x-fw">下单</span><br>支付订单</p>
+                <p class="lcThree"><span class="blue x-fw">获取账号密码</span><br>登录游戏</p>
+            </div>
+        </div>
+    </div>
+    <div class="line">
+    </div>
+</script>
+<script type="text/html" id="product-info">
+    <div class="tit">
+        <p class="x1 current">账户信息</p>
+        <p class="x2">租赁须知</p>
+    </div>
+    <div class="content">
+        <div id="userMessage">
+            <div class="details">
+                <ul>
+                    {{if prototypelist == null}}
+                    <li><span class="x-fw"></span>暂无相关信息</li>
+                    {{else}} {{each prototypelist as value i}}
+                    <li><span class="x-fw">{{value.key_name}}：</span><span data-gkey="{{value.key}}">{{value.value}}</span></li>
+                    {{/each}} {{/if}}
+                </ul>
+            </div>
+            <div class="equipment">
+                <div class="tit x-red2"><span></span>账户描述</div>
+                <div class="shiLine"></div>
+                <div class="desc">
+                    {{detail.remark}}
+                </div>
+            </div>
+            <div class="userDesc">
+                <div class="tit x-red2"><span></span>账号截图</div>
+                <div class="shiLine"></div>
+                <div class="desc">
+                    {{each picture as value i}}
+                    <img src="{{value.location}}"> {{/each}}
+                </div>
+            </div>
+        </div>
+        <div id="inform">
+            亲爱的用户，您好！<br>
+            <br> 虚贝网希望您在享受卖家账号带给您游戏乐趣的同时能够知晓并遵守以下内容：
+            <br>
+            <br> 1.关于手游租号后如何登陆游戏？
+            <br> 订单租赁成功后，订单页面会出现游戏的账号密码，您输入账号密码登录即可进行游戏。
+            <br> 2.关于押金，有些出租商品设置了押金，这个押金扣除后怎么退还？
+            <br> 某些出租商品设置需要缴纳押金才能租赁，您租号的押金会在48小时后返还到您的账户！
+            <br> 3.为了更多的朋友能够享受极品账号带来的游戏乐趣，我们期望您能遵守以下约定：
+            <br> ①禁止使用第三方外挂，禁止游戏中辱骂他人，禁止消极游戏和逃跑！
+            <br> ②租号前请详细查看卖家发布内容，知晓明确禁止内容：例如：标注为禁止打排位的不可以打排位！不允许使用金币和点卷等。
+            <br> ③严禁租赁高段位账号进行“演员”行为。
+            <br> 如果用户违反以上禁止内容，卖家有权发起维权申请，客服根据实际情况进行仲裁，有押金的扣除押金补偿卖家！
+            <br> 情节严重的统计相关信息追究责任，保留且提交不良信用记录！
+            <br>
+        </div>
+    </div>
+</script>
+<script type="text/html" id="nav-bar">
+    <ul>
+        <li><a href="http://www.xubei.com/">首页 ></a></li>
+        <!--<li><a href="./shopList.html">虚贝租号 ></a></li>-->
+        <li><a href="./shopList.html?goodId={{detail.game_id}}">{{detail.big_game_name}} ></a></li>
+        <li>{{detail.game_all_name}} ></li>
+        <li>商品编号：{{detail.goods_code}}</li>
+    </ul>
+</script>
+
+</html>

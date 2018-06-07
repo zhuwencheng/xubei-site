@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="王者荣耀租号，王者荣耀租号平台，王者荣耀租号，租号玩">
+    <meta name="description" content="虚贝网是国内专业的王者荣耀账号交易平台，提供全区全服王者荣耀游戏账号交易，数千个高性价比账号供您选择，买号就来虚贝网！">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="renderer" content="webkit" />
+    <title>虚贝网_买账号，上虚贝</title>
+    <link type="image/x-icon" rel="shortcut icon" href="//static.xubei.com/assets/images/fav-icon.png">
+    <link rel="stylesheet" href="./css/common/basic.css">
+    <link rel="stylesheet" href="./css/goods_details_xabuy.css">
+    <link rel="stylesheet" href="./css/lib/show.css">
+</head>
+
+<body>
+    <div class="xb-component-header" data-des="组件" activenav="2">
+    </div>
+    <div class="main w1200">
+        <!-- 路径导航 -->
+        <div class="nav">
+
+        </div>
+        <!-- 商品信息 -->
+        <div class="description">
+
+        </div>
+        <!-- 用户信息 -->
+        <div class="information"></div>
+    </div>
+    <div class="xb-component-footer" data-des="组件">
+    </div>
+</body>
+<script src="./js/lib/require.min.js"></script>
+<script src="./js/xb-home-config.js"></script>
+<script src="./js/goods_details_xabuy.js"></script>
+<script type="text/html" id="product-details">
+    <div class="desLeft">
+        <div id="preview" class="spec-preview">
+            {{if picture == null || picture.length
+            < 1 }} <span class="jqzoom"><span></span>暂无图片资源</span>
+                {{else}}
+                <span class="jqzoom"><span></span><img jqimg="{{picture[0].location}}" src="{{picture[0].location}}"></span>
+                {{/if}}
+        </div>
+        <div class="spec-scroll">
+            <a class="prev"></a>
+            <a class="next"></a>
+            <div class="items">
+                <ul>
+                    {{if picture == null || picture.length
+                    < 1}} {{else}} {{each picture as value i}} <li><img bimg="{{value.location}}" src="{{value.location}}" onmousemove="preview(this);"></li>
+                        {{/each}} {{/if}}
+
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="desRight">
+        <p class="tit">
+            <!-- <span class="red2">【{{detail.phone_type_text}}】</span>{{detail.goods_title}} -->
+            <span class="x-fw">【{{detail.goods_title}}】</span>
+        </p>
+        <div class="fuTit">
+            <div>
+                {{detail.game_all_name}}
+            </div>
+            <p>{{detail.search_title}}</p>
+            <div class="bdsharebuttonbox">
+                <a href="#" class="bds_more" data-cmd="more"></a>
+                <a href="#" class="bds_qzone" data-cmd="qzone"></a>
+                <a href="#" class="bds_tsina" data-cmd="tsina"></a>
+                <a href="#" class="bds_tqq" data-cmd="tqq"></a>
+                <a href="#" class="bds_renren" data-cmd="renren"></a>
+                <a href="#" class="bds_weixin" data-cmd="weixin"></a>
+                <a href="#" class="bds_tieba" data-cmd="tieba"></a>
+                <a href="#" class="bds_sqq" data-cmd="sqq"></a>
+            </div>
+        </div>
+        <div class="time bg-f1f1f1">
+            <!-- {{if detail.hour_lease == null}}
+            {{else}}
+            <div class="one current" data-leaseType="1">
+                <p class="p-top">时租</p>
+                <p>{{detail.hour_lease}}元/时</p>
+                <span></span>
+            </div>
+            {{/if}}
+
+            {{if detail.day_hours == null}}
+            {{else}}
+            <div class="two" data-leaseType="2">
+                <p class="p-top">日租</p>
+                <p>{{detail.day_hours}}元/天</p>
+                <span></span>
+            </div>
+            {{/if}}
+
+            {{if detail.week_lease == null}}
+            {{else}}
+            <div class="three" data-leaseType="3">
+                <p class="p-top">周租</p>
+                <p>{{detail.week_lease}}元/周</p>
+                <span></span>
+            </div>
+            {{/if}}
+
+            {{if detail.ten_hours == null}}
+            {{else}}
+            <div class="four" data-leaseType="4">
+                <p class="p-top">10小时畅玩</p>
+                <p>{{detail.ten_hours}}元/次</p>
+                <span></span>
+            </div>
+            {{/if}} -->
+            <p class="f14">虚贝价：<span class="red f30">{{detail.buy_price}}</span> 元</p>
+        </div>
+        <div class="deposit">
+            <!-- <p>
+                租号押金：<span class="blue">{{detail.foregift}}</span>元（订单结束后48小时退还）
+            </p>
+            <p>
+                租号限制：起租时间<span id="shortLease">{{detail.short_lease}}</span>小时
+            </p> -->
+            <p class="baoZhang">
+                服务保障：
+                <a href="http://www.xubei.com/help/servicesDetail.htm?articleId=63" target="_blank"><span class="yue">延</span><span class="f12 c-333 x-fw mgr-10">延迟转账</span></a> {{if detail.if_config_id == 0}}
+                <a href="http://www.xubei.com/help/servicesDetail.htm?articleId=38" target="_blank"><span class="yue">实</span><span class="f12 c-333 x-fw mgr-10">实名认证</span></a> {{else}} {{/if}} {{if detail.sign_seller != 0 && detail.sign_seller }}
+                <a href="http://www.xubei.com/help/servicesDetail.htm?articleId=61" target="_blank"><span class="pei">签</span><span class="f12 c-333 x-fw mgr-10">签约卖家</span></a> {{else}} {{/if}}
+            </p>
+            <!-- <p>
+                上号方式：<span class="red2">{{detail.is_show_text}}</span>
+            </p> -->
+        </div>
+        <div class="prompt">
+            友情提示：<span class="f12 c-blue">账号购买后及时验证并修改资料，卖家已绑定腾讯至尊保业务的支持退款；<a class="c-blue" href="http://www.xubei.com/help/servicesDetail.htm?articleId=15" target="_blank">查看详情>></a></span>
+        </div>
+        <div class="num">
+            <!-- <span class="tit">数量：</span>
+            <div class="gw_num">
+                <span class="jian">-</span><input type="text" disabled class="cNum"><span class="add">+</span>
+            </div> -->
+            <a href="javascript:;" class="zu">立即购买</a>
+            <!--<a href="#" class="upLoad">租号使用方法</a>-->
+        </div>
+        <div class="discount red2">
+            <!-- 优惠活动：{{detail.actity}} -->
+        </div>
+        <div class="xuLine">
+        </div>
+        <div class="liuCheng">
+            <div class="tit">
+                租赁流程：
+            </div>
+            <div class="lcImg">
+                <p class="lcOne"><span class="blue x-fw">挑选</span><br>心仪账号</p>
+                <p class="lcTwo"><span class="blue x-fw">下单</span><br>支付订单</p>
+                <p class="lcThree"><span class="blue x-fw">获取账号密码</span><br>登录游戏</p>
+            </div>
+        </div>
+    </div>
+    <div class="line">
+    </div>
+</script>
+<script type="text/html" id="product-info">
+    <div class="tit">
+        <p class="x1 current">账户信息</p>
+        <p class="x2">购买须知</p>
+    </div>
+    <div class="content">
+        <div id="userMessage">
+            <div class="details">
+                <ul>
+                    {{if prototypelist == null}}
+                    <li><span class="x-fw"></span>暂无相关信息</li>
+                    {{else}} {{each prototypelist as value i}}
+                    <li><span class="x-fw">{{value.key_proto}}：</span><span>{{value.val}}</span></li>
+                    {{/each}} {{/if}}
+                </ul>
+            </div>
+            <div class="equipment">
+                <div class="tit x-red2"><span></span>账户描述</div>
+                <div class="shiLine"></div>
+                <div class="desc">
+                    {{detail.remark}}
+                </div>
+            </div>
+            <div class="userDesc">
+                <div class="tit x-red2"><span></span>账号截图</div>
+                <div class="shiLine"></div>
+                <div class="desc">
+
+                    {{if picture == null || picture.length
+                    < 1}} {{else}} {{each picture as value i}} <img src="{{value.location}}">
+                        {{/each}} {{/if}}
+                </div>
+            </div>
+        </div>
+        <div id="inform">
+            “亲爱的用户，您好！虚贝网希望您能够知晓以下内容：<br> 1.购买后如何进行下一步操作？
+            <br> 您购买的商品在支付后，进入【虚贝个人中心→我购买的商品】提取资料，遇到异常问题请在提取资料页面查看卖家联系方式，联系卖家沟通解决，无法解决的情况下可以申请售后仲裁。
+            <br> 2.什么是15天延迟转账服务？(为了保障您购买账号的安全，我们为您提供了15天延迟转账服务！为您预留充足的账号资料修改时间！)
+            <br> 您购买商品支付的金额，在付款后会进入冻结状态，从付款购买时间起，15天后本次交易金额才会解除冻结，卖家才可以进行提现操作，请您购买后抓紧时间联系卖家修改账号资料。
+            <br> 3.购买商品后如何进行账号资料修改和账号安全维护？
+            <br> ①如何提取商品资料？
+            <br> 购买商品后虚贝平台会为您验证进入虚贝网→我是买家→我购买的商品→提取资料。
+            <br> ②如何修改商品资料？
+            <br> 登陆aq.qq.com，可以修改账号密码、密保资料，部分商品需要登陆QQ变更为常用登陆地后才可修改密码。部分商品绑定手机可以通过密码问题修改， 如需要短信验证的情况下，可在订单页面查看卖家联系方式，联系卖家协助修改资料。<br> ③如何进行账号安全维护？
+            <br> 1)购买账号商品后，建议您添加自己或者朋友的高等级QQ号为好友，3-5个以上，同时每天和加过好友的QQ聊天20次以上，进入好友QQ空间进行评论、留言、点赞操作。
+            <br> 2)购买账号后，建议您每日电脑或者手机登陆QQ2小时以上（不要在网吧挂QQ，最好在家），直到变更为常用登陆地。
+            <br> 3)未设置身份证的帐号，及时登录：http://aq.qq.com/cn2/manage/my_mb，点击右上角的“站点地图”—“个人资料”—设置好身份证。
+            <br> 4)及时更改密码、邮箱、密保问题和答案，并绑定密保卡、手机、手机令牌。建议您交易完成后绑定QQ安全中心（手机版），删除所有好友，更改QQ号的所有资料（如交友、家园、相册、空间、个人信息等）。
+            <br> 以上资料修改完成后，建议您每隔1-2天修改一次密码密保问题，建议连续操作5次左右，次数越多越好，修改后的密保密码请牢记哦！
+            <br> 4.如果遇到购买的商品无法修改资料或者异常的情况如何处理？
+            <br> 虚贝网为您提供了15天延迟转账的安全保障，如果您在15天内无法进行资料的修改或者卖家不协助修改资料，您可以在订单列表页申请售后仲裁，3天内您可以提交文字和图片凭证，卖家也可以提交相关文字和图片凭证。3天后客服介入仲裁，根据双方提供的相关凭证，完成仲裁判定。
+            <br> 5、资料修改完成后请下载腾讯QQ安全中心APP，查看卖家是否绑定了“至尊保”业务，如果已绑定虚贝网支持退款，未绑定请及时绑定，可保障账号100%安全！
+            <br> 腾讯手机版安全中心推出至尊保业务，一旦绑定至尊保可百分百找回账号！即日起本站购买腾讯系列游戏账号后如果发现卖家绑定了至尊保业务的，支持退款！如果没有绑定至尊保，请您购买后绑定至尊保业务，可百分百保障账号安全！”
+            <br>
+
+        </div>
+    </div>
+</script>
+<script type="text/html" id="nav-bar">
+    <ul>
+        <li><a href="http://www.xubei.com/">首页 ></a></li>
+        <!--<li><a href="./shopList.html">虚贝租号 ></a></li>-->
+        <li><a href="./shopList.html?goodId={{detail.game_id}}">{{detail.big_game_name}} ></a></li>
+        <li>{{detail.game_all_name}} ></li>
+        <li>商品编号：{{detail.goods_code}}</li>
+    </ul>
+</script>
+
+</html>

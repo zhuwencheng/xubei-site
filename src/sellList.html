@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="renderer" content="webkit" />
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>租号平台_租号玩_虚贝网</title>
+    <meta http-equiv="keywords" content="LOL租号，LOL租号平台，英雄联盟租号，租号玩">
+    <meta http-equiv="description" content="虚贝网是国内专业的LOL租号平台，提供全区全服英雄联盟 游戏账号出租，上万个高端极品账号供您选择，想要租号玩就来虚贝网！">
+    <link rel="icon" href="//static.xubei.com/assets/images/fav-icon.png" />
+    <link href="./css/common/basic.css" rel="stylesheet" type="text/css">
+    <link href="./css/lib/pager.css" rel="stylesheet" type="text/css">
+    <!--列表页样式 start-->
+    <link rel="stylesheet" href="./css/z-shopList.css" type="text/css" />
+    <!-- <link rel="stylesheet" href="./css/common/pager.css" type="text/css" /> -->
+</head>
+
+<body>
+    <div class="xb-component-header" data-des="组件" activeNav="0"></div>
+    <!-- 列表页start -->
+    <div class="w1200 shoplist-position">
+        <a href="http://www.xubei.com">虚贝网</a> > 买帐号</div>
+    <!-- 过滤选项 start-->
+    <div class="w1200">
+        <div class="shoplist-filter">
+            <div class="hd">
+                你的搜索 > 所有账号
+            </div>
+            <div class="filter-table" style="display:none;">
+                <div class="filter-label">热门游戏:</div>
+                <div class="filter-c hot-game"></div>
+            </div>
+            <div class="filter-table" style="display:none;">
+                <div class="filter-label">游戏区:</div>
+                <div class="filter-c default hide-filter" data-s-filter="area">
+                </div>
+                <span class="show-more">更多</span>
+            </div>
+            <div class="filter-table" style="display:none;">
+                <div class="filter-label">游戏服:</div>
+                <div class="filter-c default game-server hide-filter" data-s-filter="server">
+                </div>
+                <span class="show-more">更多</span>
+            </div>
+            <div class="filter-table g-phone-type">
+                <div class="filter-label">适用系统：</div>
+                <div class="filter-c w1000 default" data-s-filter="system">
+                    <span data-val="" class="active">全部系统</span>
+                    <span data-val="1">苹果</span>
+                    <span data-val="0">安卓</span>
+                </div>
+            </div>
+            <div class="filter-table">
+                <div class="filter-label">高级选项：</div>
+                <div class="filter-c w1000">
+                    <ul class="tab-filter">
+                        <li class="w86 active">
+                            价格范围
+                        </li>
+                        <li class="w86">
+                            签约卖家
+                        </li>
+                    </ul>
+                    <div class="search-box">
+                        <input type="text" placeholder="商品名称" id="seachinput">
+                        <span></span>
+                    </div>
+                    <p class="search-key">关键字：
+                    </p>
+                </div>
+            </div>
+            <div class="filter-table bt-0">
+                <div class="filter-c tab-content">
+                    <div data-name="priceRange">
+                        <input type="text" onkeyup="this.value=this.value.replace(/\D/g,'')" /> -
+                        <input type="text" onkeyup="this.value=this.value.replace(/\D/g,'')" />
+                        <span class="s-btn" data-name="价格：">确定</span>
+                    </div>
+                    <div style="display:none;" data-name="signSeller">
+                        <span class="text" data-val="1" data-text="签约卖家-是">是</span>
+                        <span class="text" data-val="0" data-text="签约卖家-否">否</span>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--asdfas-->
+    <!-- 过滤选项 end-->
+    <!-- table列表 start-->
+    <div class="w1200 mgt-20" style="position: relative;"><!--临时更改，后续删除-->
+        <a href="http://www.lucklol.com/xbl" target="_blank" id="yh-ad"style="display:none;position: absolute; background: url(http://static.xubei.com/assets/images/piar.png) no-repeat;width: 205px;height: 50px;left: 510px;top: -10px;"></a>
+        <div class="table-th">
+            <div class="page">
+                <span>共
+                    <em class="total">0</em>个商品</span>
+                <span class="pre">
+                    <</span>
+                <span>
+                            <em class="current">1</em>/
+                            <em class="totalPage">1</em>
+                        </span>
+                <span class="next">></span>
+            </div>
+            <div class="filter-nav">
+                <span class="all" data-key="all">综合排序</span>
+                <span data-key="timeOrderBy">时间
+                    <em class="up"></em>
+                    <em class="down" data-default="1"></em>
+                </span>
+                <span data-key="priceOrderBy">价格
+                    <em class="up" data-default="0"></em>
+                    <em class="down"></em>
+                </span>
+            </div>
+        </div>
+        <div class="shop-list-wrapper">
+            <div class="shop-table" id="shop-table">
+                <!-- <div class="emptyDiv"></div> -->
+                <div class="loading"></div>
+            </div>
+            <div class="xb-pagination t-r mgt-30" id="page1">
+
+            </div>
+        </div>
+    </div>
+    <!-- table列表 end-->
+    <!-- 列表页end -->
+    <div class="xb-component-footer" data-des="组件"></div>
+</body>
+<script src="./js/lib/require.min.js"></script>
+<script src="./js/xb-home-config.js"></script>
+<script src="./js/sellList.js"></script>
+<script id="list-tpl01" type="text/x-handlebars-template">
+    {{each list as item i}}
+    <a href="sellList.html?gameid={{item.game_id}}" data-gid="{{item.game_id}}">{{item.game_name}}</a> {{/each}}
+</script>
+<script id="list-tpl02" type="text/x-handlebars-template">
+    {{each list as item i}}
+    <div class="filter-table">
+        <div class="filter-label">{{item.gamename}}:</div>
+        <div class="filter-c all-game hide-filter">
+            {{each item.list as gitem i}}
+                <a href="sellList.html?gameid={{gitem.game_id}}" data-gid="{{gitem.game_id}}">{{gitem.game_name}}{{if gitem.is_new===2}}
+            <em>新</em> {{/if}}{{if gitem.showfont!= null}}<em>{{gitem.showfont}}</em> {{/if}}</a> 
+            {{/each}}
+        </div>
+        <span class="show-more">更多</span>
+    </div>
+    {{/each}}
+</script>
+<script id="list-tpl03" type="text/x-handlebars-template">
+    {{each list as item i}}
+    <span data-id="{{item.id}}">{{item.gameName}}</span> {{/each}}
+</script>
+<script id="list-tpl04" type="text/x-handlebars-template">
+    {{each list as item i}}
+    <span>{{item}}</span> {{/each}}
+</script>
+<script id="list-tpl05" type="text/x-handlebars-template">
+    {{each list as item i}}
+    <span data-key="theme">{{item.key}}</span> {{/each}}
+</script>
+<script id="list-tpl06" type="text/x-handlebars-template">
+    {{if list.length>0}} {{each list as item i}}
+    <div class="shop-table-tr" data-id="{{item.goods_id}}">
+        <div class="img-box">
+            <a href="./goods_details_xabuy.html?goodsId={{item.id}}" target="_blank">
+                <img src={{item.pic_src}} />
+            </a>
+        </div>
+        <div class="detail">
+            <p class="title">
+                <a href="./goods_details_xabuy.html?goodsId={{item.id}}" target="_blank">
+                            {{if item.phone_type===0}}<span class="red">【安卓】</span>{{/if}} {{if item.phone_type===1}}<span class="red">【苹果】</span>{{/if}} 
+                            <span class="red">{{if item.is_show===0}}【上号器登录】{{/if}}{{if item.is_show===1}}【帐号密码登录】{{/if}} </span>{{item.goodstitle}}</a>
+            </p>
+            {{if item.game_id==245}}
+            <p><a href="./goods_details_xabuy.html?goodsId={{item.goods_id}}" target="_blank">{{item.search_title}}</a></p>{{/if}} {{if item.searchtitle}}
+            <p>{{item.searchtitle}}</p>{{/if}}
+            <p class="c-999">
+                {{if item.signseller==1}}<a href="http://www.xubei.com/help/servicesDetail.htm?articleId=61" class="tag" target="_blank">签</a>{{/if}}
+                <a href="http://www.xubei.com/help/servicesDetail.htm?articleId=63" class="tag" target="_blank">延</a>
+                <a href="http://www.xubei.com/help/servicesDetail.htm?articleId=38" class="tag" target="_blank">实</a> {{if item.stickorder==1}}<a href="http://www.xubei.com/notice/84.html?menuId=2&articleId=175" class="tag" target="_blank">热门推荐</a>{{/if}}
+                <!-- {{if item.compensate===0}}<a href="http://www.xubei.com/help/servicesDetail.htm?articleId=77" target="_blank" class="tag">赔</a>{{/if}} -->{{item.gameallname}}
+            </p>
+            <p>身份证：{{if item.ifconfigid===0}}已设置{{/if}}{{if item.ifconfigid!==0}}未设置{{/if}}</p>
+
+        </div>
+        <div class="tool">
+            <p class="red b">{{item.buyprice}}元</p>
+            <p class="mgt-10">
+                <a href="./goods_details_xabuy.html?goodsId={{item.id}}" target="_blank" class="link-btn">立即购买</a>
+            </p>
+        </div>
+    </div>
+    {{/each}} {{/if}} {{if list.length===0}}
+    <div class="emptyDiv"></div>
+    {{/if}}
+</script>
+
+</html>

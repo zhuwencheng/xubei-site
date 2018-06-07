@@ -1,0 +1,444 @@
+@import "./common/var.less";
+@hotbtn-c: #208fdd;
+@allbtn-c: #67c0ff;
+.shoplist-position {
+    line-height: 40px;
+    text-indent: 20px;
+    color: @c-5;
+    a {
+        color: @c-5;
+    }
+}
+
+.shoplist-filter {
+    border: @bd-e5 1px solid;
+    overflow: hidden;
+    color: @c-5;
+    zoom: 1;
+    padding: 0 20px;
+    background: @fff;
+    .hd {
+        line-height: 40px;
+        border-bottom: @bd-e5 1px solid;
+        .act-f-box {
+            display: inline-block;
+            position: relative;
+            cursor: pointer;
+            color: #ff7200;
+            margin-left: 15px;
+            padding-right: 10px;
+            em {
+                background: url(../images/icon.png) -29px -62px no-repeat;
+                width: 12px;
+                height: 12px;
+                display: inline-block;
+                position: absolute;
+                right: -5px;
+                top: 5px;
+            }
+        }
+    }
+    .filter-table {
+        display: table;
+        border-bottom: 1px solid @bd-e5;
+        width: 100%;
+        table-layout: fixed;
+        position: relative;
+        .show-more {
+            background: #f5f5f5 url(../images/open-2.png) 45px center no-repeat;
+            width: 65px;
+            line-height: 30px;
+            text-align: left;
+            text-indent: 15px;
+            position: absolute;
+            right: 0;
+            top: 10px;
+            cursor: pointer;
+            z-index: 10;
+            &.active {
+                background-image: url(../images/open-1.png);
+            }
+        }
+        &:last-child {
+            border-bottom: 0;
+        }
+        a {
+            color: @c-5;
+        }
+        &>div {
+            display: table-cell;
+            &.filter-label {
+                padding-right: 20px;
+                width: 120px;
+                vertical-align: middle;
+                text-align: right;
+                border-right: 1px solid @bd-e5;
+            }
+            &.filter-c {
+                padding: 10px 0px 10px 20px;
+                line-height: 30px;
+                min-height: 30px;
+                position: relative;
+                width: 917px;
+                &.hide-filter {
+                    overflow: hidden;
+                    display: block;
+                    height: 50px;
+                    padding: 0 20px;
+                    padding-right: 80px;
+                    a,
+                    span {
+                        margin-top: 10px !important;
+                        margin-bottom: 10px !important;
+                        line-height: 30px;
+                    }
+                }
+            }
+            &.w1000 {
+                width: 1000px;
+            }
+            &.hot-game {
+                padding: 20px;
+                width: 977px;
+                a {
+                    padding: 0 10px;
+                    min-width: 70px;
+                    color: @fff;
+                    text-align: center;
+                    margin-right: 5px;
+                    background: @hotbtn-c;
+                    display: inline-block;
+                    border-radius: 3px;
+                }
+            }
+            &.all-game {
+                a {
+                    display: inline-block;
+                    margin: 5px;
+                    position: relative;
+                    margin-right: 30px;
+                    & em {
+                        position: absolute;
+                        width: 18px;
+                        height: 18px;
+                        line-height: 18px;
+                        text-align: center;
+                        font-size: 12px;
+                        color: @fff;
+                        background: url(../images/flag-icon.png) no-repeat;
+                        right: -21px;
+                        top: -6px;
+                    }
+                    &.active {
+                        padding: 0 10px;
+                        min-width: 70px;
+                        color: @fff;
+                        text-align: center;
+                        background: @allbtn-c;
+                        display: inline-block;
+                        border-radius: 3px;
+                    }
+                }
+            }
+            &.default {
+                cursor: pointer;
+                span {
+                    margin-right: 40px;
+                    display: inline-block;
+                    &.active,
+                    &:hover {
+                        color: @blue3;
+                    }
+                }
+            }
+            &.game-server {
+                span {
+                    width: 9em;
+                    margin-right: 10px;
+                }
+            }
+            .tab-filter {
+                li {
+                    height: 60px;
+                    line-height: 60px;
+                    border: 1px solid @fff;
+                    float: left;
+                    border-bottom-color: @bd-e5;
+                    margin-bottom: -11px;
+                    text-align: center;
+                    z-index: 1;
+                    cursor: pointer; // margin-right: 10px;
+                    &.active {
+                        border-color: @bd-e5;
+                        border-bottom-color: @fff;
+                        color: @blue3;
+                        cursor: default;
+                    }
+                }
+                .w56 {
+                    width: 56px;
+                }
+                .w70 {
+                    width: 70px;
+                }
+                .w86 {
+                    width: 86px;
+                }
+                .w108 {
+                    width: 108px;
+                }
+            }
+            .search-box {
+                width: 210px;
+                height: 30px;
+                overflow: hidden;
+                vertical-align: middle;
+                margin-left: 10px;
+                margin-top: 15px;
+                position: relative;
+                display: inline-block;
+                span {
+                    position: absolute;
+                    width: 35px;
+                    height: 30px;
+                    cursor: pointer;
+                    right: -1px;
+                    top: 0px;
+                    background: @hotbtn-c url(../images/icon.png) no-repeat -18px -9px;
+                }
+                input {
+                    height: 28px;
+                    line-height: 28px;
+                    border: 1px solid @bd-e5;
+                    outline: none;
+                    padding: 0 10px;
+                    width: 180px;
+                }
+            }
+            .search-key {
+                display: inline-block;
+                padding-left: 20px;
+                margin-top: 15px;
+                vertical-align: middle;
+                font-size: 12px;
+                cursor: pointer;
+                span {
+                    color: @blue3;
+                    margin-right: 15px;
+                    display: inline-block;
+                    transform: scale(.9);
+                }
+            }
+            &.tab-content {
+                padding-left: 170px;
+                &>div {
+                    .text {
+                        margin-right: 20px;
+                        cursor: pointer;
+                        &:hover,
+                        &.active {
+                            color: @blue3;
+                        }
+                    }
+                    input[type="text"] {
+                        width: 60px;
+                        line-height: 25px;
+                        height: 25px;
+                        border: 1px solid @bd-e5;
+                        text-align: center;
+                        vertical-align: middle;
+                    }
+                    .s-btn {
+                        background: @colorf7;
+                        vertical-align: middle;
+                        text-align: center;
+                        line-height: 25px;
+                        height: 25px;
+                        border: 1px solid @bd-e5;
+                        font-size: 12px;
+                        width: 60px;
+                        display: inline-block;
+                        cursor: pointer;
+                        margin-left: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* 租号列表 */
+
+.table-th {
+    background: #e6e6e6;
+    line-height: 40px;
+    height: 40px;
+    overflow: hidden;
+    .page {
+        width: 250px;
+        float: right;
+        text-align: right;
+        padding-right: 20px;
+        span {
+            display: inline-block;
+            .current {
+                color: @blue3;
+            }
+            &.pre,
+            &.next {
+                width: 14px;
+                height: 14px;
+                text-align: center;
+                line-height: 12px;
+                border: 1px solid #a1a1a1;
+                font-size: 12px;
+                background: @fff;
+                cursor: pointer;
+                margin: 0 5px;
+                color: #a1a1a1;
+                &.disabled {
+                    cursor: not-allowed;
+                }
+            }
+        }
+    }
+    .filter-nav {
+        margin-right: 300px;
+        span {
+            display: inline-block;
+            float: left;
+            text-align: center;
+            padding: 0 8px;
+            position: relative;
+            border-right: 1px solid #d7d7d7;
+            min-width: 4em;
+            cursor: pointer;
+            &.active {
+                color: @blue3;
+            }
+            &.all {
+                width: 104px;
+                background: @hotbtn-c;
+                color: @fff;
+            }
+            em {
+                display: inline-block;
+                background: url(../images/icon.png) no-repeat;
+                width: 9px;
+                height: 9px;
+                position: absolute;
+                top: 10px;
+                right: 7px;
+                &.up {
+                    background-position: -30px -101px;
+                    &.active {
+                        background-position: -58px -101px;
+                    }
+                }
+                &.down {
+                    background-position: -30px -133px;
+                    top: 21px;
+                    &.active {
+                        background-position: -58px -133px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.shop-list-wrapper {
+    background: @fff;
+    padding: 20px 20px 40px;
+    overflow: hidden;
+    zoom: 1;
+    border: 1px solid @bd-e5;
+    border-top: 0;
+    .shop-table-tr {
+        display: table;
+        padding: 15px 0;
+        border-bottom: 1px dashed @bd-e5;
+        table-layout: fixed;
+        width: 100%;
+        &:hover {
+            background: #f6f6f6;
+        }
+        &>div {
+            display: table-cell;
+            vertical-align: middle;
+            &.img-box {
+                width: 140px;
+                height: 140px;
+                position: relative;
+                background-color: #000;
+                text-align: center;
+                span {
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 50px;
+                    height: 50px;
+                    background: url(../images/icon.png) no-repeat -18px -165px;
+                    color: @fff;
+                    text-indent: 5px;
+                    font-size: 16px;
+                    line-height: 30px;
+                }
+                img {
+                    max-width: 140px;
+                    max-height: 140px;
+                }
+            }
+            &.tool {
+                width: 160px;
+                padding: 20px 15px 20px 0;
+                line-height: 40px;
+                text-align: center;
+                margin-right: 15px;
+                .link-btn {
+                    width: 158px;
+                    border: 1px solid @blue3;
+                    background: @fff;
+                    font-weight: bold;
+                    display: block;
+                    color: @blue3;
+                    &:hover {
+                        background: @blue3;
+                        color: @fff;
+                    }
+                }
+            }
+            &.detail {
+                padding: 0 40px 0 30px;
+                line-height: 30px;
+                p {
+                    height: 30px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    .hot-icon {
+                        display: inline-block;
+                        width: 20px;
+                        vertical-align: middle;
+                        height: 30px;
+                        margin-right: 5px;
+                        background: url(../images/hot.png) center center no-repeat;
+                    }
+                    .tag {
+                        background: #ff3a3a;
+                        line-height: 20px;
+                        padding: 0 3px;
+                        text-align: center;
+                        display: inline-block;
+                        color: @fff;
+                        margin-right: 6px;
+                    }
+                    &.title {
+                        font-weight: bold;
+                        margin-bottom: 5px;
+                    }
+                }
+            }
+        }
+    }
+}

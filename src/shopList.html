@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="renderer" content="webkit" />
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>租号平台_租号玩_虚贝网</title>
+    <meta http-equiv="keywords" content="LOL租号，LOL租号平台，英雄联盟租号，租号玩">
+    <meta http-equiv="description" content="虚贝网是国内专业的LOL租号平台，提供全区全服英雄联盟 游戏账号出租，上万个高端极品账号供您选择，想要租号玩就来虚贝网！">
+    <link rel="icon" href="//static.xubei.com/assets/images/fav-icon.png" />
+    <link href="./css/common/basic.css" rel="stylesheet" type="text/css">
+    <link href="./css/lib/pager.css" rel="stylesheet" type="text/css">
+    <!--列表页样式 start-->
+    <link rel="stylesheet" href="./css/z-shopList.css" type="text/css" />
+    <!-- <link rel="stylesheet" href="./css/common/pager.css" type="text/css" /> -->
+</head>
+
+<body>
+    <div class="xb-component-header" data-des="组件" activeNav="0"></div>
+    <!-- 列表页start -->
+    <div class="w1200 shoplist-position">
+        <a href="http://www.xubei.com">虚贝网</a> > 手游交易</div>
+    <!-- 过滤选项 start-->
+    <div class="w1200">
+        <div class="shoplist-filter">
+            <div class="hd">
+                你的搜索 > 所有账号
+            </div>
+            <div class="filter-table" style="display:none;">
+                <div class="filter-label">热门游戏:</div>
+                <div class="filter-c hot-game"></div>
+            </div>
+            <div class="filter-table" style="display:none;">
+                <div class="filter-label">手游专区:</div>
+                <div class="filter-c all-game hide-filter" id="phonegame"></div>
+                <span class="show-more">更多</span>
+            </div>
+            <div class="filter-table" style="display:none;">
+                <div class="filter-label">端游专区:</div>
+                <div class="filter-c all-game hide-filter" id="pcgame"></div>
+                <span class="show-more">更多</span>
+            </div>
+            <div class="filter-table" style="display:none;">
+                <div class="filter-label">游戏区:</div>
+                <div class="filter-c default hide-filter" data-s-filter="area">
+                </div>
+                <span class="show-more">更多</span>
+            </div>
+            <div class="filter-table" style="display:none;">
+                <div class="filter-label">游戏服:</div>
+                <div class="filter-c default game-server hide-filter" data-s-filter="server">
+                </div>
+                <span class="show-more">更多</span>
+            </div>
+            <div class="filter-table g-phone-type">
+                <div class="filter-label">适用系统：</div>
+                <div class="filter-c default w1000" data-s-filter="system">
+                    <span data-val="" class="active">全部系统</span>
+                    <span data-val="1">苹果</span>
+                    <span data-val="0">安卓</span>
+                </div>
+            </div>
+            <div class="filter-table">
+                <div class="filter-label">高级选项：</div>
+                <div class="filter-c w1000">
+                    <ul class="tab-filter">
+                        <li class="w70 honor-qualifier">
+                            排位赛
+                        </li>
+                        <li class="w56 honor-grading">
+                            段位
+                        </li>
+                        <li class="w86 honor-number">
+                            英雄数量
+                        </li>
+                        <li class="w86 honor-skin-number">
+                            皮肤数量
+                        </li>
+                        <li class="w70 hero-qualifier">
+                            排位赛
+                        </li>
+                        <li class="w70 hero-grading">
+                            段位
+                        </li>
+                        <li class="w70 hero-grading-box">
+                            段位框
+                        </li>
+                        <li class="w86 hero-number">
+                            英雄数量
+                        </li>
+                        <li class="w86 hero-skin-number">
+                            皮肤数量
+                        </li>
+                        <li class="w108 hero-number-weapons">
+                            英雄武器数量
+                        </li>
+                        <li class="w86 account-type">
+                            账号类型
+                        </li>
+                        <li class="w86 active">
+                            价格范围
+                        </li>
+                        <li class="w86 g-phone-type">
+                            上号方式
+                        </li>
+                        <li class="w86">
+                            签约卖家
+                        </li>
+                        <li class="w70">
+                            押金
+                        </li>
+                    </ul>
+                    <div class="search-box">
+                        <input type="text" placeholder="商品名称" id="seachinput">
+                        <span></span>
+                    </div>
+                    <!-- <p class="search-key">关键字：
+                    </p> -->
+                </div>
+            </div>
+            <div class="filter-table bt-0">
+                <div class="filter-c tab-content">
+                    <div style="display:none;" data-name="ifPlayQualifying">
+                        <span class="text" data-val="0" data-text="排位赛：允许">允许</span>
+                        <span class="text" data-val="1" data-text="排位赛：不允许">不允许</span>
+                    </div>
+                    <div style="display:none;" data-name="gradingId">
+                        <span class="text" data-val="ayyht" data-text="段位：倔强青铜">倔强青铜</span>
+                        <span class="text" data-val="azxby" data-text="段位：秩序白银">秩序白银</span>
+                        <span class="text" data-val="aryhj" data-text="段位：荣耀黄金">荣耀黄金</span>
+                        <span class="text" data-val="azgbj" data-text="段位：尊贵铂金">尊贵铂金</span>
+                        <span class="text" data-val="ayhzs" data-text="段位：永恒钻石">永恒钻石</span>
+                        <span class="text" data-val="azzxy" data-text="段位：至尊星耀">至尊星耀</span>
+                        <span class="text" data-val="azqwz" data-text="段位：最强王者">最强王者</span>
+                    </div>
+                    <div style="display:none;" data-name="heroRange">
+                        <span class="text" data-val="0-10" data-text="英雄数量：0-10">0-10</span>
+                        <span class="text" data-val="11-20" data-text="英雄数量：11-20">11-20</span>
+                        <span class="text" data-val="21-30" data-text="英雄数量：21-30">21-30</span>
+                        <span class="text" data-val="31-40" data-text="英雄数量：31-40">31-40</span>
+                        <span class="text" data-val="41-50" data-text="英雄数量：41-50">41-50</span>
+                        <span class="text" data-val="51-60" data-text="英雄数量：51-60">51-60</span>
+                        <span class="text" data-val="61-99999999" data-text="英雄数量：60以上">60以上</span>
+                        <input type="text" onkeyup="this.value=this.value.replace(/\D/g,'')" /> -
+                        <input type="text" onkeyup="this.value=this.value.replace(/\D/g,'')" />
+                        <span class="s-btn" data-name="英雄数量：">确定</span>
+                    </div>
+                    <div style="display:none;" data-name="skinRange">
+                        <span class="text" data-val="0-50" data-text="皮肤数量：0-50">0-50</span>
+                        <span class="text" data-val="51-100" data-text="皮肤数量：51-100">51-100</span>
+                        <span class="text" data-val="101-150" data-text="皮肤数量：101-150">101-150</span>
+                        <span class="text" data-val="151-99999999" data-text="皮肤数量：150及以上">150及以上</span>
+                        <input type="text" onkeyup="this.value=this.value.replace(/\D/g,'')" /> -
+                        <input type="text" onkeyup="this.value=this.value.replace(/\D/g,'')" />
+                        <span class="s-btn" data-name="皮肤数量：">确定</span>
+                    </div>
+                    <div style="display:none;" data-name="ifPlayQualifying">
+                        <span class="text" data-val="0" data-text="排位赛：允许">允许</span>
+                        <span class="text" data-val="1" data-text="排位赛：不允许">不允许</span>
+                    </div>
+                    <div style="display:none;" data-name="gradingId">
+                        <span class="text" data-val="wdw" data-text="段位：无段位">无段位</span>
+                        <span class="text" data-val="yyht" data-text="段位：英勇黄铜V-I">英勇黄铜V-I</span>
+                        <span class="text" data-val="bqby" data-text="段位：不屈白银V-I">不屈白银V-I</span>
+                        <span class="text" data-val="ryhj" data-text="段位：荣耀黄金V-I">荣耀黄金V-I</span>
+                        <span class="text" data-val="hgbj" data-text="段位：华贵铂金V-I">华贵铂金V-I</span>
+                        <span class="text" data-val="cczs" data-text="段位：璀璨钻石V-I">璀璨钻石V-I</span>
+                        <span class="text" data-val="cfds" data-text="段位：超凡大师">超凡大师</span>
+                        <span class="text" data-val="zqwz" data-text="段位：最强王者">最强王者</span>
+                    </div>
+                    <div style="display:none;" data-name="gradingFrameId">
+                        <span class="text" data-val="0" data-text="段位框：无段位框">无段位框</span>
+                        <span class="text" data-val="1" data-text="段位框：黄铜框">黄铜框</span>
+                        <span class="text" data-val="2" data-text="段位框：白银框">白银框</span>
+                        <span class="text" data-val="3" data-text="段位框：黄金框">黄金框</span>
+                        <span class="text" data-val="4" data-text="段位框：铂金框">铂金框</span>
+                        <span class="text" data-val="5" data-text="段位框：钻石框">钻石框</span>
+                        <span class="text" data-val="6" data-text="段位框：大师框">大师框</span>
+                        <span class="text" data-val="7" data-text="段位框：王者框">王者框</span>
+                    </div>
+                    <div style="display:none;" data-name="heroRange">
+                        <span class="text" data-val="0-29" data-text="英雄数量：0-29">0-29</span>
+                        <span class="text" data-val="30-59" data-text="英雄数量：30-59">30-59</span>
+                        <span class="text" data-val="60-99" data-text="英雄数量：60-99">60-99</span>
+                        <span class="text" data-val="100-129" data-text="英雄数量：100-129">100-129</span>
+                        <span class="text" data-val="130-99999999" data-text="英雄数量：130及以上">130及以上</span>
+                        <input type="text" onkeyup="this.value=this.value.replace(/\D/g,'')" /> -
+                        <input type="text" onkeyup="this.value=this.value.replace(/\D/g,'')" />
+                        <span class="s-btn" data-name="英雄数量：">确定</span>
+                    </div>
+                    <div style="display:none;" data-name="skinRange">
+                        <span class="text" data-val="0-29" data-text="皮肤数量：0-29">0-29</span>
+                        <span class="text" data-val="30-100" data-text="皮肤数量：30-100">30-100</span>
+                        <span class="text" data-val="101-199" data-text="皮肤数量：101-199">101-199</span>
+                        <span class="text" data-val="200-299" data-text="皮肤数量：200-299">200-299</span>
+                        <span class="text" data-val="300-399" data-text="皮肤数量：300-399">300-399</span>
+                        <span class="text" data-val="400-499" data-text="皮肤数量：400-499">400-499</span>
+                        <span class="text" data-val="500-99999999" data-text="皮肤数量：500及以上">500及以上</span>
+                        <input type="text" onkeyup="this.value=this.value.replace(/\D/g,'')" /> -
+                        <input type="text" onkeyup="this.value=this.value.replace(/\D/g,'')" />
+                        <span class="s-btn" data-name="皮肤数量：">确定</span>
+                    </div>
+                    <div style="display:none;" data-name="armsRange">
+                        <span class="text" data-val="1-10" data-text="英雄武器数量：1-10v">1-10v</span>
+                        <span class="text" data-val="11-20" data-text="英雄武器数量：11-20v">11-20v</span>
+                        <span class="text" data-val="21-30" data-text="英雄武器数量：21-30v">21-30v</span>
+                        <span class="text" data-val="31-40" data-text="英雄武器数量：31-40v">31-40v</span>
+                        <span class="text" data-val="41-50" data-text="英雄武器数量：41-50v">41-50v</span>
+                        <span class="text" data-val="51-70" data-text="英雄武器数量：51-70v">51-70v</span>
+                        <span class="text" data-val="71-99999999" data-text="英雄武器数量：70v以上">70v以上</span>
+                        <input type="text" onkeyup="this.value=this.value.replace(/\D/g,'')" /> -
+                        <input type="text" onkeyup="this.value=this.value.replace(/\D/g,'')" />
+                        <span class="s-btn" data-name="英雄武器数量：">确定</span>
+                    </div>
+                    <div style="display:none;" data-name="accountType">
+                        <span class="text" data-val="爆破装" data-text="账号类型：爆破号">爆破号</span>
+                        <span class="text" data-val="生化装" data-text="账号类型：生化号">生化号</span>
+                        <span class="text" data-val="双全装" data-text="账号类型：双全装">双全装</span>
+                        <span class="text" data-val="稀有武器" data-text="账号类型：稀有武器">稀有武器</span>
+                    </div>
+                    <div data-name="priceRange">
+                        <span class="text" data-val="1-1" data-text="价格：一元租号">一元租号</span>
+                        <span class="text" data-val="2-2" data-text="价格：二元租号">二元租号</span>
+                        <span class="text" data-val="0-3" data-text="价格：0-3元">0-3元</span>
+                        <span class="text" data-val="3-5" data-text="价格：3-5元">3-5元</span>
+                        <span class="text" data-val="6-99999999" data-text="价格：5元以上">5元以上</span>
+                        <input type="text" onkeyup="this.value=this.value.replace(/\D/g,'')" /> -
+                        <input type="text" onkeyup="this.value=this.value.replace(/\D/g,'')" />
+                        <span class="s-btn" data-name="价格：">确定</span>
+                    </div>
+                    <div data-name="type" style="display:none">
+                        <span class="text" data-val="0">上号器登录</span>
+                        <span class="text" data-val="1">帐号密码登录</span>
+                    </div>
+                    <div style="display:none;" data-name="signSeller">
+                        <span class="text" data-val="1" data-text="签约卖家-是">是</span>
+                        <span class="text" data-val="0" data-text="签约卖家-否">否</span>
+                    </div>
+                    <div style="display:none;" data-name="deposit">
+                        <span class="text" data-val="1" data-text="押金-有">有</span>
+                        <span class="text" data-val="0" data-text="押金-无">无</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!--asdfas-->
+    <!-- 过滤选项 end-->
+    <!-- table列表 start-->
+    <div class="w1200 mgt-20" style="position: relative;">
+        <a href="http://www.lucklol.com/xbl" target="_blank" id="yh-ad" style="display:none;position: absolute; background: url(http://static.xubei.com/assets/images/piar.png) no-repeat;width: 205px;height: 50px;left: 680px;top: -10px;"></a>
+        <div class="table-th">
+            <div class="page">
+                <span>共
+                    <em class="total">0</em>个商品</span>
+                <span class="pre">
+                    <</span>
+                        <span>
+                            <em class="current">1</em>/
+                            <em class="totalPage">1</em>
+                        </span>
+                        <span class="next">></span>
+            </div>
+            <div class="filter-nav">
+                <span class="all" data-key="all">综合排序</span>
+                <span data-key="timeOrderBy">时间
+                    <em class="up"></em>
+                    <em class="down" data-default="1"></em>
+                </span>
+                <span data-key="priceOrderBy">价格
+                    <em class="up" data-default="0"></em>
+                    <em class="down"></em>
+                </span>
+            </div>
+        </div>
+        <div class="shop-list-wrapper">
+            <div class="shop-table" id="shop-table">
+                <!-- <div class="emptyDiv"></div> -->
+                <div class="loading"></div>
+            </div>
+            <div class="xb-pagination t-r mgt-30" id="page1">
+
+            </div>
+        </div>
+    </div>
+    <!-- table列表 end-->
+    <!-- 列表页end -->
+    <div class="xb-component-footer" data-des="组件"></div>
+</body>
+<script src="./js/lib/require.min.js"></script>
+<script src="./js/xb-home-config.js"></script>
+<script src="./js/shoplist-z.js"></script>
+<script id="list-tpl01" type="text/x-handlebars-template">
+    {{each list as item i}}
+    <a href="shopList.html?gameid={{item.game_id}}" data-gid="{{item.game_id}}">{{item.game}}</a> {{/each}}
+</script>
+<script id="list-tpl02" type="text/x-handlebars-template">
+    {{each list as item i}}
+    <a href="shopList.html?gameid={{item.game_id}}" data-gid="{{item.game_id}}">{{item.game}}{{if item.is_new===2}}<em>新</em> {{/if}}   </a> {{/each}}
+</script>
+<script id="list-tpl03" type="text/x-handlebars-template">
+    {{each list as item i}}
+    <span data-id="{{item.id}}">{{item.gameName}}</span> {{/each}}
+</script>
+<script id="list-tpl04" type="text/x-handlebars-template">
+    {{each list as item i}}
+    <span>{{item}}</span> {{/each}}
+</script>
+<script id="list-tpl05" type="text/x-handlebars-template">
+    {{each list as item i}}
+    <span data-key="theme">{{item.key}}</span> {{/each}}
+</script>
+<script id="list-tpl06" type="text/x-handlebars-template">
+    {{if list.length>0}} {{each list as item i}}
+    <div class="shop-table-tr" data-id="{{item.goods_id}}">
+        <div class="img-box">
+            {{if item.is_phone==1}}<a href="./goods_details_xa.html?goodsId={{item.goods_id}}" target="_blank">{{/if}}
+                         {{if item.is_phone!=1}}
+                        <a href="http://www.xubei.com/leases/{{item.goods_id}}.html" target="_blank">{{/if}}
+                        {{if item.actity}}<span class="mark">惠</span>{{/if}} 
+                        <img src={{item.imageurl}} />
+                    </a>
+        </div>
+        <div class="detail">
+            <p class="title">
+                {{if item.is_phone==1}}
+                <a href="./goods_details_xa.html?goodsId={{item.goods_id}}" target="_blank">{{/if}} {{if item.is_phone!=1}}
+                            <a href="http://www.xubei.com/leases/{{item.goods_id}}.html" target="_blank">{{/if}}
+                            {{if item.phone_type===0}}<span class="red">【安卓】</span>{{/if}} {{if item.phone_type===1}}<span class="red">【苹果】</span>{{/if}} 
+                            <span class="red">{{if item.is_show===0}}【上号器登录】{{/if}}{{if item.is_show===1}}【帐号密码登录】{{/if}} </span>{{item.goods_title}}</a>
+            </p>
+            {{if item.game_id==245}}
+            <p><a href="http://www.xubei.com/leases/{{item.goods_id}}.html" target="_blank">{{item.search_title}}</a></p>{{/if}}
+            <p class="c-999">
+                {{if item.signseller==1}}<a href="http://www.xubei.com/help/servicesDetail.htm?articleId=61" class="tag" target="_blank">签</a>{{/if}} {{if item.stickorder==1}}<a href="http://www.xubei.com/notice/84.html?menuId=2&articleId=175" class="tag"
+                    target="_blank">热门推荐</a>{{/if}}
+                <!-- {{if item.compensate===0}}<a href="http://www.xubei.com/help/servicesDetail.htm?articleId=77" target="_blank" class="tag">赔</a>{{/if}} -->{{item.game_all_name}}
+            </p>
+            <p><a href="http://www.xubei.com/notice/89.html" target="_blank" title="什么是商品热度？"><em class="hot-icon"></em>商品热度：{{item.hot_value}}</a><span class="mgl-20">{{item.short_lease}}小时起租</span><span class="mgl-20">押金：{{item.foregift}} 元</span></p>
+            {{if item.actity}}
+            <p class="red">优惠活动：{{item.actity}}</p>{{/if}}
+        </div>
+        <div class="tool">
+            <p class="red b">{{item.lease_price}}元/时</p>
+            <p class="mgt-10">
+                {{if item.is_phone==1}}
+                <a href="./goods_details_xa.html?goodsId={{item.goods_id}}" target="_blank" class="link-btn">{{/if}} {{if item.is_phone!=1}}
+                            <a href="http://www.xubei.com/leases/{{item.goods_id}}.html" target="_blank" class="link-btn">{{/if}}
+                        立即租赁</a>
+            </p>
+        </div>
+    </div>
+    {{/each}} {{/if}} {{if list.length===0}}
+    <div class="emptyDiv"></div>
+    {{/if}}
+</script>
+
+</html>

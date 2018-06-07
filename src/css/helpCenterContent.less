@@ -1,0 +1,312 @@
+@line-color:#e2e2e2;
+@xb-blue:#208fdd;
+
+.main{
+  .nav{
+    width: 100%;
+    height: 65px;
+    overflow: hidden;
+    
+    ul{
+      margin-top: 22px;
+      float: left;
+      li{
+        float: left;
+        color: #333;
+      }
+    }
+
+    .search{
+      float: right;
+      margin-top: 15px;
+      box-sizing: border-box;
+      overflow: hidden;
+      input{
+        box-sizing: border-box;
+        border: none;
+        width: 314px;
+        height: 34px;
+        border-right: none;
+        padding-left: 20px;
+        line-height: 34px;
+        background-color: #ededed;
+      }
+      .btn{
+        border: 0px;
+        padding: 0;
+        height: 35px;
+        width: 46px;
+        background: url("../images/help/search_2.png") no-repeat;
+        margin-left: -1px;
+      }
+    }
+  }
+
+  .content{
+    width: 100%;
+    height: 707px;
+    .content-l{
+      width: 250px;
+      height: 100%;
+      float: left;
+      margin-right: 10px;
+      overflow: hidden;
+      >.tit{
+        width: 100%;
+        height: 67px;
+        background-color: @xb-blue;
+        font-size: 16px;
+        color: #FFFFFF;
+        text-align: center;
+        line-height: 67px;
+      }
+      >ul{
+        width: 100%;
+        li{
+          box-sizing: border-box;
+          width: 100%;
+          height: 80px;
+          text-align: center;
+          line-height: 80px;
+          font-size: 16px;
+          color: #555;
+          background-color: #fff;
+          border-bottom: 1px solid #efefef;
+          cursor: pointer;
+          padding-right:20px;
+          &.active{
+            background-color: #f1eff0;
+            >a{
+              color: @xb-blue;
+              .icon1{
+                background: url("../images/help/new_help_act.png") no-repeat;
+              }
+              .icon2{
+                background: url("../images/help/qus_act.png") no-repeat;
+              }
+              .icon3{
+                background: url("../images/help/help_act.png") no-repeat;
+              }
+              .icon4{
+                background: url("../images/help/help_act.png") no-repeat;
+              }
+              .icon5{
+                background: url("../images/help/money_act.png") no-repeat;
+              }
+              .icon6{
+                background: url("../images/help/upper_act.png") no-repeat;
+              }
+              .icon7{
+                background: url("../images/help/Agreement_act.png") no-repeat;
+              }
+              .icon8{
+                background: url("../images/help/service_act.png") no-repeat;
+              }
+              >span{
+                background-color: #37A2F0;
+              }
+            }
+          }
+          a{
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            >i{
+              vertical-align: middle;
+              display: inline-block;
+              margin-right: 18px;
+              width: 24px;
+              height: 22px;
+            }
+            >span{
+              float: left;
+              width: 8px;
+              height: 79px;
+              background-color: #fff;
+            }
+          }
+        }
+        li:hover{
+          >a{
+            color: @xb-blue;
+            .icon1{
+              background: url("../images/help/new_help_act.png") no-repeat;
+            }
+            .icon2{
+              background: url("../images/help/qus_act.png") no-repeat;
+            }
+            .icon3{
+              background: url("../images/help/help_act.png") no-repeat;
+            }
+            .icon4{
+              background: url("../images/help/help_act.png") no-repeat;
+            }
+            .icon5{
+              background: url("../images/help/money_act.png") no-repeat;
+            }
+            .icon6{
+              background: url("../images/help/upper_act.png") no-repeat;
+            }
+            .icon7{
+              background: url("../images/help/Agreement_act.png") no-repeat;
+            }
+            .icon8{
+              background: url("../images/help/service_act.png") no-repeat;
+            }
+          }
+        }
+
+      }
+    }
+
+    .content-r{
+      float: left;
+      width: 940px;
+      height: 100%;
+      box-sizing: border-box;
+      padding: 5px 40px;
+      background-color: #fff;
+      position: relative;
+      >.list{
+        >a{
+          >img{
+            margin-top: 50px;
+            margin-left: 280px;
+          }
+        }
+      }
+      ul{
+        li{
+          width: 100%;
+          height: 55px;
+          line-height: 55px;
+          box-sizing: border-box;
+          border-bottom: 1px dashed #e5e5e5;
+          a{
+            color: #555;
+            &:hover{
+              color: @xb-blue;
+            }
+          }
+        }
+      }
+      .keyWordsUl{
+        box-sizing: border-box;
+        li{
+          width: 100%;
+          height: 75px;
+          box-sizing: border-box;
+          border-bottom: 1px dashed #e5e5e5;
+          .tit{
+            line-height: 34px;
+            margin-top: 15px;
+            .spot{
+              display: inline-block;
+              width: 6px;
+              height: 6px;
+              background: url("../images/help/cir.png");
+              margin-right: 10px;
+            }
+            a{
+
+              color: @xb-blue;
+            }
+          }
+          .keyContent{
+            line-height: 34px;
+            width: 100%;
+            height: 34px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            font-size: 12px;
+            box-sizing: border-box;
+            padding-left: 15px;
+          }
+        }
+      }
+      >.xb-pagination{
+        position: absolute;
+        box-sizing: border-box;
+        text-align: center;
+        bottom: 10px;
+        right: 40px;
+      }
+      .callMe{
+        display: none;
+        margin-top: 30px;
+        .content{
+          width: 100%;
+          height: 100%;
+          background-color: #fff;
+          box-sizing: border-box;
+          >div{
+            float: left;
+            text-align: center;
+            margin-right:75px;
+            img{
+              margin-top: 35px;
+            }
+            p{
+              margin-top: 5px;
+              text-align: center;
+              font-size: 16px;
+              color: #333;
+              margin-bottom: 25px;
+            }
+            div{
+              text-align: left;
+              vertical-align: middle;
+              margin-bottom: 10px;
+              >a{
+                color: #086bc0;
+              }
+              span{
+                vertical-align: middle;
+                display: inline-block;
+                width: 100px;
+                height: 32px;
+                background: url("../images/help/more_1.png") no-repeat;
+                a{
+                  display: inline-block;
+                  width: 100%;
+                  height: 100%;
+                  text-align: center;
+                  line-height: 32px;
+                  color: #FFFFFF;
+                  font-size: 12px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.icon1{
+  background: url("../images/help/new_help_def.png") no-repeat;
+}
+.icon2{
+  background: url("../images/help/qus_def.png") no-repeat;
+}
+.icon3{
+  background: url("../images/help/help_def.png") no-repeat;
+}
+.icon4{
+  background: url("../images/help/help_def.png") no-repeat;
+}
+.icon5{
+  background: url("../images/help/money_def.png") no-repeat;
+}
+.icon6{
+  background: url("../images/help/upper_def.png") no-repeat;
+}
+.icon7{
+  background: url("../images/help/Agreement_def.png") no-repeat;
+}
+.icon8{
+  background: url("../images/help/service_def.png") no-repeat;
+}
+

@@ -1,0 +1,112 @@
+@import "../common/var";
+@f-bj:#3d3d3d;
+@c-a1:#a1a1a1;
+.xb-footer{
+   background: @f-bj;
+   overflow: hidden;
+   padding: 30px 0 20px;
+   color: @c-a1;
+   margin-top: 20px;
+   .logo{
+       width: 280px;
+       height: 65px;
+       line-height: 65px;
+       text-indent: 10000px;
+       display: inline-block;
+       overflow: hidden;
+       margin-top: 35px;
+       float: left;
+       background: url(../../images/logo1.png) no-repeat center center;
+   }
+   .left-menu{
+       margin-left: 350px;
+       margin-right: 240px;
+       overflow: hidden;
+       dl{
+           float: left;
+           width: 33.3%;
+           font-size: 12px;
+           dt{
+               font-size: 14px;
+               color: @fff;
+               margin-bottom: 10px;
+               font-weight: bold;
+           }
+           dd{
+               line-height: 2.2em;
+               a{
+                   color: @c-a1;
+                   &:hover{
+                       color: @fff;
+                   }
+               }
+           }
+       }
+   }
+   .fr-contact{
+       width: 240px;
+       float: right;
+       text-indent: 25px;
+       line-height: 28px;
+       .btn{
+           background: @blue3;
+           margin-top: 10px;
+           color: @fff;
+           text-indent: 0;
+           width: 90px;
+           line-height: 26px;
+           border-radius: 0;
+       }
+   }
+}
+.xb-statement{
+   background: @f-bj;
+   border-top:1px solid @c-5;
+   padding: 20px 0 40px;
+   line-height: 32px;
+   color: @c-a1;
+   .fri-link{
+       a{
+           margin: 0 15px;
+       }
+   }
+   a{
+       color: @c-a1;
+       &:hover{
+           color: @fff;
+       }
+   }
+   .p-icon{
+       width: 25px;
+       height: 25px;
+       display: inline-block;
+       background: url(../../images/home-icon_01.png) no-repeat -271px -26px;
+       vertical-align: middle;
+       margin: 0 6px;
+   }
+   .hy-icon{
+       display: inline-block;
+       margin: 20px 20px 0;
+       background: url(../../images/ft-01.png) no-repeat center center;
+       &.hy-icon01{
+           background-image: url(../../images/ft-01.png);
+           width: 62px;
+           height: 65px;
+       }
+       &.hy-icon02{
+           background-image: url(../../images/ft-02.png);
+           width: 43px;
+           height: 48px;
+       }
+       &.hy-icon03{
+           background-image: url(../../images/ft-03.png);
+           width: 129px;
+           height: 49px;
+       }
+       &.hy-icon04{
+           background-image: url(../../images/ft-04.png);
+           width: 39px;
+           height: 53px;
+       }
+   }
+}

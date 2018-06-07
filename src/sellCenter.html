@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="renderer" content="webkit" />
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Cache-Control" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <title>买账号_虚贝网</title>
+    <meta http-equiv="keywords" content="LOL租号，LOL租号平台，英雄联盟租号，租号玩">
+    <meta http-equiv="description" content="虚贝网是国内专业的LOL租号平台，提供全区全服英雄联盟 游戏账号出租，上万个高端极品账号供您选择，想要租号玩就来虚贝网！">
+    <link rel="icon" href="//static.xubei.com/assets/images/fav-icon.png" />
+    <link href="./css/common/basic.css" rel="stylesheet" type="text/css">
+    <!--列表页样式 start-->
+    <link rel="stylesheet" href="./css/sellCenter.css" type="text/css" />
+</head>
+
+<body>
+    <div class="xb-component-header" data-des="组件" activeNav="0"></div>
+    <!-- 列表页start -->
+    <div class="w1200 sc-position">
+        <a href="http://www.xubei.com">虚贝网</a> > 买帐号
+    </div>
+    <div class="w1200 steam-center resort">
+        
+    </div>
+    <div class="w1200 pc-center resort">
+       
+    </div>
+    <div class="w1200 phone-center resort">
+       
+    </div>
+    <div class="w1200 tj-center">
+        
+    </div>
+    <div class="xb-component-footer" data-des="组件"></div>
+</body>
+<script src="./js/lib/require.min.js"></script>
+<script src="./js/xb-home-config.js"></script>
+<script src="./js/sellCenter.js"></script>
+<script id="sell-tpl01" type="text/x-handlebars-template">
+        <div class="sc-hd01" data-sort="{{bsort}}">
+            <span class="icon steam"></span>
+            {{block_name}}
+            <a href="./sellList.html?gameid=1494" class="more"  target="_blank">查看更多</a>
+        </div>
+        <div class="bd">
+            {{each typeList.slice(0,8) as item i}}
+            <dl>
+                <dt>
+                    <a href="./sellList.html?gameid={{item.game_id}}"  target="_blank">
+                        <img src="{{item.pic_src}}" />
+                    </a>
+                </dt>
+                <dd>
+                    <a href="./sellList.html?gameid={{item.game_id}}"  target="_blank">{{item.game_name}}</a>
+                </dd>
+            </dl>
+        {{/each}}
+        </div>
+</script>
+<script id="sell-tpl02" type="text/x-handlebars-template">
+    <div class="sc-hd01"  data-sort="{{bsort}}">
+        <span class="icon pc"></span>
+        {{block_name}}
+        <a href="./sellList.html?gameid=245" class="more"  target="_blank">查看更多</a>
+    </div>
+    <div class="bd">
+        {{each typeList.slice(0,8) as item i}}
+        <dl>
+            <dt>
+                <a href="./sellList.html?gameid={{item.game_id}}"  target="_blank">
+                    <img src="{{item.pic_src}}" />
+                </a>
+            </dt>
+            <dd>
+                <a href="./sellList.html?gameid={{item.game_id}}"  target="_blank">{{item.game_name}} </a>
+            </dd>
+            <dd class="key">
+                    {{each item.tag as tagitem index}}
+                    <a href="{{tagitem.url}}"  target="_blank">{{tagitem.tag}}</a>
+                    {{/each}}
+            </dd>
+        </dl>
+        {{/each}}
+    </div>
+</script>
+
+<script id="sell-tpl03" type="text/x-handlebars-template">
+    <div class="sc-hd01" data-sort="{{bsort}}">
+        <span class="icon phone"></span>
+        {{block_name}}
+        <a href="./sellList.html?gameid=1808" class="more"  target="_blank">查看更多</a>
+    </div>
+    <div class="bd">
+            {{each typeList.slice(0,10) as item i}}
+        <dl>
+            <dt>
+                <a href="./sellList.html?gameid={{item.game_id}}"  target="_blank">
+                    <img src="{{item.pic_src}}" />
+                </a>
+            </dt>
+            <dd>
+                <a href="./sellList.html?gameid={{item.game_id}}"  target="_blank">{{item.game_name}} </a>
+            </dd>
+            <dd class="key">
+                {{each item.tag as tagitem index}}
+                <a href="{{tagitem.url}}"  target="_blank">{{tagitem.tag}}</a>
+                {{/each}}
+            </dd>
+        </dl>
+        {{/each}}
+        </div>
+</script>
+<script id="sell-tpl04" type="text/x-handlebars-template">
+    <div class="sc-hd02">
+            {{each list as item i}}
+            <span>{{item.game_name}}</span>
+            {{/each}}
+        </div>
+        <div class="bd">
+            {{each list as item i}}
+            <div style="display: none;">
+                {{each item.list as gitem index}}
+                <dl>
+                    <dt>
+                        {{if !gitem.game_id}}<a href="./goods_details_xabuy.html?goodsId={{gitem.id}}" target="_blank">{{/if}}
+                        {{if gitem.game_id}}<a href="./sellList.html?gameid={{gitem.game_id}}" target="_blank">{{/if}}
+                            <img src="{{gitem.imageurl}}" />
+                        </a>
+                    </dt>
+                    <dd>
+                        {{if !gitem.game_id}}<a href="./goods_details_xabuy.html?goodsId={{gitem.id}}" target="_blank">{{/if}}
+                        {{if gitem.game_id}}<a href="./sellList.html?gameid={{gitem.game_id}}" target="_blank">{{/if}}
+                            <span>【{{gitem.big_game_name}}】</span>{{gitem.goods_title}}</a>
+                    </dd>
+                    <dd class="money">
+                        {{if !gitem.game_id}}<a href="./goods_details_xabuy.html?goodsId={{gitem.id}}" target="_blank">{{/if}}
+                        {{if gitem.game_id}}<a href="./sellList.html?gameid={{gitem.game_id}}" target="_blank">{{/if}}
+                            <em>￥</em>{{gitem.buy_price}}</a>
+                    </dd>
+                </dl>
+                {{/each}}
+            </div>
+            {{/each}}
+        </div>
+</script>
+
+</html>

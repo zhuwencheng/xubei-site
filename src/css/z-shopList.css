@@ -1,0 +1,430 @@
+.shoplist-position {
+  line-height: 40px;
+  text-indent: 20px;
+  color: #555;
+}
+.shoplist-position a {
+  color: #555;
+}
+.shoplist-filter {
+  border: #e5e5e5 1px solid;
+  overflow: hidden;
+  color: #555;
+  zoom: 1;
+  padding: 0 20px;
+  background: #fff;
+}
+.shoplist-filter .hd {
+  line-height: 40px;
+  border-bottom: #e5e5e5 1px solid;
+}
+.shoplist-filter .hd .act-f-box {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  color: #ff7200;
+  margin-left: 15px;
+  padding-right: 10px;
+}
+.shoplist-filter .hd .act-f-box em {
+  background: url(../images/icon.png) -29px -62px no-repeat;
+  width: 12px;
+  height: 12px;
+  display: inline-block;
+  position: absolute;
+  right: -5px;
+  top: 5px;
+}
+.shoplist-filter .filter-table {
+  display: table;
+  border-bottom: 1px solid #e5e5e5;
+  width: 100%;
+  table-layout: fixed;
+  position: relative;
+}
+.shoplist-filter .filter-table .show-more {
+  background: #f5f5f5 url(../images/open-2.png) 45px center no-repeat;
+  width: 65px;
+  line-height: 30px;
+  text-align: left;
+  text-indent: 15px;
+  position: absolute;
+  right: 0;
+  top: 10px;
+  cursor: pointer;
+  z-index: 10;
+}
+.shoplist-filter .filter-table .show-more.active {
+  background-image: url(../images/open-1.png);
+}
+.shoplist-filter .filter-table:last-child {
+  border-bottom: 0;
+}
+.shoplist-filter .filter-table a {
+  color: #555;
+}
+.shoplist-filter .filter-table > div {
+  display: table-cell;
+}
+.shoplist-filter .filter-table > div.filter-label {
+  padding-right: 20px;
+  width: 120px;
+  vertical-align: middle;
+  text-align: right;
+  border-right: 1px solid #e5e5e5;
+}
+.shoplist-filter .filter-table > div.filter-c {
+  padding: 10px 0px 10px 20px;
+  line-height: 30px;
+  min-height: 30px;
+  position: relative;
+  width: 917px;
+}
+.shoplist-filter .filter-table > div.filter-c.hide-filter {
+  overflow: hidden;
+  display: block;
+  height: 50px;
+  padding: 0 20px;
+  padding-right: 80px;
+}
+.shoplist-filter .filter-table > div.filter-c.hide-filter a,
+.shoplist-filter .filter-table > div.filter-c.hide-filter span {
+  margin-top: 10px !important;
+  margin-bottom: 10px !important;
+  line-height: 30px;
+}
+.shoplist-filter .filter-table > div.w1000 {
+  width: 1000px;
+}
+.shoplist-filter .filter-table > div.hot-game {
+  padding: 20px;
+  width: 977px;
+}
+.shoplist-filter .filter-table > div.hot-game a {
+  padding: 0 10px;
+  min-width: 70px;
+  color: #fff;
+  text-align: center;
+  margin-right: 5px;
+  background: #208fdd;
+  display: inline-block;
+  border-radius: 3px;
+}
+.shoplist-filter .filter-table > div.all-game a {
+  display: inline-block;
+  margin: 5px;
+  position: relative;
+  margin-right: 30px;
+}
+.shoplist-filter .filter-table > div.all-game a em {
+  position: absolute;
+  width: 18px;
+  height: 18px;
+  line-height: 18px;
+  text-align: center;
+  font-size: 12px;
+  color: #fff;
+  background: url(../images/flag-icon.png) no-repeat;
+  right: -21px;
+  top: -6px;
+}
+.shoplist-filter .filter-table > div.all-game a.active {
+  padding: 0 10px;
+  min-width: 70px;
+  color: #fff;
+  text-align: center;
+  background: #67c0ff;
+  display: inline-block;
+  border-radius: 3px;
+}
+.shoplist-filter .filter-table > div.default {
+  cursor: pointer;
+}
+.shoplist-filter .filter-table > div.default span {
+  margin-right: 40px;
+  display: inline-block;
+}
+.shoplist-filter .filter-table > div.default span.active,
+.shoplist-filter .filter-table > div.default span:hover {
+  color: #208fdd;
+}
+.shoplist-filter .filter-table > div.game-server span {
+  width: 9em;
+  margin-right: 10px;
+}
+.shoplist-filter .filter-table > div .tab-filter li {
+  height: 60px;
+  line-height: 60px;
+  border: 1px solid #fff;
+  float: left;
+  border-bottom-color: #e5e5e5;
+  margin-bottom: -11px;
+  text-align: center;
+  z-index: 1;
+  cursor: pointer;
+}
+.shoplist-filter .filter-table > div .tab-filter li.active {
+  border-color: #e5e5e5;
+  border-bottom-color: #fff;
+  color: #208fdd;
+  cursor: default;
+}
+.shoplist-filter .filter-table > div .tab-filter .w56 {
+  width: 56px;
+}
+.shoplist-filter .filter-table > div .tab-filter .w70 {
+  width: 70px;
+}
+.shoplist-filter .filter-table > div .tab-filter .w86 {
+  width: 86px;
+}
+.shoplist-filter .filter-table > div .tab-filter .w108 {
+  width: 108px;
+}
+.shoplist-filter .filter-table > div .search-box {
+  width: 210px;
+  height: 30px;
+  overflow: hidden;
+  vertical-align: middle;
+  margin-left: 10px;
+  margin-top: 15px;
+  position: relative;
+  display: inline-block;
+}
+.shoplist-filter .filter-table > div .search-box span {
+  position: absolute;
+  width: 35px;
+  height: 30px;
+  cursor: pointer;
+  right: -1px;
+  top: 0px;
+  background: #208fdd url(../images/icon.png) no-repeat -18px -9px;
+}
+.shoplist-filter .filter-table > div .search-box input {
+  height: 28px;
+  line-height: 28px;
+  border: 1px solid #e5e5e5;
+  outline: none;
+  padding: 0 10px;
+  width: 180px;
+}
+.shoplist-filter .filter-table > div .search-key {
+  display: inline-block;
+  padding-left: 20px;
+  margin-top: 15px;
+  vertical-align: middle;
+  font-size: 12px;
+  cursor: pointer;
+}
+.shoplist-filter .filter-table > div .search-key span {
+  color: #208fdd;
+  margin-right: 15px;
+  display: inline-block;
+  transform: scale(0.9);
+}
+.shoplist-filter .filter-table > div.tab-content {
+  padding-left: 170px;
+}
+.shoplist-filter .filter-table > div.tab-content > div .text {
+  margin-right: 20px;
+  cursor: pointer;
+}
+.shoplist-filter .filter-table > div.tab-content > div .text:hover,
+.shoplist-filter .filter-table > div.tab-content > div .text.active {
+  color: #208fdd;
+}
+.shoplist-filter .filter-table > div.tab-content > div input[type="text"] {
+  width: 60px;
+  line-height: 25px;
+  height: 25px;
+  border: 1px solid #e5e5e5;
+  text-align: center;
+  vertical-align: middle;
+}
+.shoplist-filter .filter-table > div.tab-content > div .s-btn {
+  background: #f7f7f7;
+  vertical-align: middle;
+  text-align: center;
+  line-height: 25px;
+  height: 25px;
+  border: 1px solid #e5e5e5;
+  font-size: 12px;
+  width: 60px;
+  display: inline-block;
+  cursor: pointer;
+  margin-left: 20px;
+}
+/* 租号列表 */
+.table-th {
+  background: #e6e6e6;
+  line-height: 40px;
+  height: 40px;
+  overflow: hidden;
+}
+.table-th .page {
+  width: 250px;
+  float: right;
+  text-align: right;
+  padding-right: 20px;
+}
+.table-th .page span {
+  display: inline-block;
+}
+.table-th .page span .current {
+  color: #208fdd;
+}
+.table-th .page span.pre,
+.table-th .page span.next {
+  width: 14px;
+  height: 14px;
+  text-align: center;
+  line-height: 12px;
+  border: 1px solid #a1a1a1;
+  font-size: 12px;
+  background: #fff;
+  cursor: pointer;
+  margin: 0 5px;
+  color: #a1a1a1;
+}
+.table-th .page span.pre.disabled,
+.table-th .page span.next.disabled {
+  cursor: not-allowed;
+}
+.table-th .filter-nav {
+  margin-right: 300px;
+}
+.table-th .filter-nav span {
+  display: inline-block;
+  float: left;
+  text-align: center;
+  padding: 0 8px;
+  position: relative;
+  border-right: 1px solid #d7d7d7;
+  min-width: 4em;
+  cursor: pointer;
+}
+.table-th .filter-nav span.active {
+  color: #208fdd;
+}
+.table-th .filter-nav span.all {
+  width: 104px;
+  background: #208fdd;
+  color: #fff;
+}
+.table-th .filter-nav span em {
+  display: inline-block;
+  background: url(../images/icon.png) no-repeat;
+  width: 9px;
+  height: 9px;
+  position: absolute;
+  top: 10px;
+  right: 7px;
+}
+.table-th .filter-nav span em.up {
+  background-position: -30px -101px;
+}
+.table-th .filter-nav span em.up.active {
+  background-position: -58px -101px;
+}
+.table-th .filter-nav span em.down {
+  background-position: -30px -133px;
+  top: 21px;
+}
+.table-th .filter-nav span em.down.active {
+  background-position: -58px -133px;
+}
+.shop-list-wrapper {
+  background: #fff;
+  padding: 20px 20px 40px;
+  overflow: hidden;
+  zoom: 1;
+  border: 1px solid #e5e5e5;
+  border-top: 0;
+}
+.shop-list-wrapper .shop-table-tr {
+  display: table;
+  padding: 15px 0;
+  border-bottom: 1px dashed #e5e5e5;
+  table-layout: fixed;
+  width: 100%;
+}
+.shop-list-wrapper .shop-table-tr:hover {
+  background: #f6f6f6;
+}
+.shop-list-wrapper .shop-table-tr > div {
+  display: table-cell;
+  vertical-align: middle;
+}
+.shop-list-wrapper .shop-table-tr > div.img-box {
+  width: 140px;
+  height: 140px;
+  position: relative;
+  background-color: #000;
+  text-align: center;
+}
+.shop-list-wrapper .shop-table-tr > div.img-box span {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 50px;
+  height: 50px;
+  background: url(../images/icon.png) no-repeat -18px -165px;
+  color: #fff;
+  text-indent: 5px;
+  font-size: 16px;
+  line-height: 30px;
+}
+.shop-list-wrapper .shop-table-tr > div.img-box img {
+  max-width: 140px;
+  max-height: 140px;
+}
+.shop-list-wrapper .shop-table-tr > div.tool {
+  width: 160px;
+  padding: 20px 15px 20px 0;
+  line-height: 40px;
+  text-align: center;
+  margin-right: 15px;
+}
+.shop-list-wrapper .shop-table-tr > div.tool .link-btn {
+  width: 158px;
+  border: 1px solid #208fdd;
+  background: #fff;
+  font-weight: bold;
+  display: block;
+  color: #208fdd;
+}
+.shop-list-wrapper .shop-table-tr > div.tool .link-btn:hover {
+  background: #208fdd;
+  color: #fff;
+}
+.shop-list-wrapper .shop-table-tr > div.detail {
+  padding: 0 40px 0 30px;
+  line-height: 30px;
+}
+.shop-list-wrapper .shop-table-tr > div.detail p {
+  height: 30px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.shop-list-wrapper .shop-table-tr > div.detail p .hot-icon {
+  display: inline-block;
+  width: 20px;
+  vertical-align: middle;
+  height: 30px;
+  margin-right: 5px;
+  background: url(../images/hot.png) center center no-repeat;
+}
+.shop-list-wrapper .shop-table-tr > div.detail p .tag {
+  background: #ff3a3a;
+  line-height: 20px;
+  padding: 0 3px;
+  text-align: center;
+  display: inline-block;
+  color: #fff;
+  margin-right: 6px;
+}
+.shop-list-wrapper .shop-table-tr > div.detail p.title {
+  font-weight: bold;
+  margin-bottom: 5px;
+}

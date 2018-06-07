@@ -1,0 +1,89 @@
+
+@import "var.less";
+.uc-position{
+    line-height: 50px;
+    color: @c-5;
+    &:a{
+        color: @c-5;
+    }
+}
+
+/* 用户中心菜单 */
+.uc-main{
+    overflow: hidden;
+    zoom: 1;
+    .uc-siderbar{
+        background: @fff;
+        overflow: hidden;
+        width: 233px;
+        float: left;
+        dl{
+            dt{
+                line-height: 46px;
+                position: relative;
+                span{
+                    position: absolute;
+                    top: 13px;
+                    left: 19px;
+                    display: inline-block;
+                    width: 19px;
+                    height: 19px;
+                    background: no-repeat url('http://www.xubei.com/rewardTask/images/icon.png');
+                    &.icon1{
+                        background-position: 1% 1% ;
+                    }
+                    &.icon2{
+                        background-position: 42% 1% ;
+                    }
+                    &.icon3{
+                        background-position: 90% 1% ;
+                    }
+                    &.icon4{
+                        background: url('http://www.xubei.com/rewardTask/images/icon7dai.png') ;
+                    }
+                    &.icon5{
+                        background-position: 55% 96% ;
+                    }
+                    &.icon6{
+                        background-position: 95% 91% ;
+                    }
+                }
+                a{
+                    font-size: 14px;
+                    line-height: 46px;
+                    height: 46px;
+                    display: block;
+                    padding-left: 57px;
+                    cursor: pointer;
+                    color: #fff;
+                    border-bottom: 1px solid #1580cb;
+                    background: #208fdd;
+                    &:hover{
+                        background: #1580cb;
+                    }
+                }
+            }
+            dd{
+                a{
+                    line-height: 40px;
+                    display: inline-block;
+                    width: 175px;
+                    height: 39px;
+                    margin: 1px 0;
+                    padding-left: 54px;
+                    border-left: 3px solid #fff;
+                    &:hover,&.active{
+                        color: #659bf2;
+                        border-color: #659bf2;
+                    }
+                }
+            }
+        }
+    }
+}
+/* 用户中心菜单 */
+.uc-r-main{
+    //min-height: 200px;
+    margin-left: 250px;
+    background: @fff;
+}

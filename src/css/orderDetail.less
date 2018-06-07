@@ -1,0 +1,196 @@
+.uc-r-main{
+    .orderColorRed{
+        color: red;
+    }
+    border:1px solid #efefef;
+    .progress{
+        width: 630px;
+        height: 20px;
+        margin: 50px auto 30px auto;
+        li{
+            float: left;
+        }
+        .text{
+            width: 16px;
+            height: 16px;
+            border: 2px solid #208fdd;
+            border-radius: 50%;
+            position: relative;
+            span{
+                position: absolute;
+                width: 120px;
+                text-align: center;
+                top: -30px;
+                left: -50px;
+            }
+            &.active{
+                background: #208fdd;                
+                span{
+                    color: #208fdd;
+                }
+            }
+        }
+        .line{
+            width: 285px;
+            height: 2px;
+            background: #208fdd;
+            margin-top: 9px;
+        }
+    }
+    .title{
+        height: 90px;
+        background: #e9f6ff;
+        position: relative;
+        padding-left: 115px;
+        .text{
+            i{
+                background: url(../images/icon.png) -73px -1773px;
+                position: absolute;
+                left: 40px;
+                width: 60px;
+                height: 60px;
+                top: 15px;
+            }
+            h2{
+                height: 90px;
+                line-height: 90px;
+                font-size: 18px;
+                color: #555;
+                .payMgs{
+                    color: #208fdd;
+                }
+                .sqwq{
+                    color: #208fdd;
+                    font-size: 14px;
+                    margin-left: 20px;
+                    font-weight: normal;
+                }
+            }
+        } 
+        .qrcode{
+            margin:-15px 0px 0px 0px;
+            #codes{
+                display: inline-block;
+            }
+            a{
+                color: #208fdd;
+            }
+        }
+    }
+    .list_mgs{
+        >h2{
+            padding:33px 0 15px 18px;
+            font-size: 18px;
+            color: #333;
+            font-weight: normal;
+            border-bottom: 1px solid #efefef;
+        }
+        .orderMgs{
+            overflow: hidden;
+            padding:5px 0 0 45px;
+            .orderList1{
+                float: left;
+                width: 280px;  
+            }
+            .orderList2{
+                float: left;
+                width: 203px;  
+            }
+            .orderList3{
+                float: left;
+                width: 420px;  
+            }
+            li{
+                margin-top: 15px;
+            }
+        }
+        .goodsMgs{
+            padding:10px 20px 20px 20px;
+            h3{
+                margin-left:-8px;
+                font-weight: normal;
+                margin-bottom: 10px;
+            }
+            p{
+                padding:10px 0 3px 0px;
+            }
+            .panel{
+                background: #eff0f1;
+                padding:2px 25px 5px;
+                li{
+                    line-height: 35px;
+                    float: left;
+                    width: 286px;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+            }
+        }
+        .imgDemo{
+            padding:24px 0 0 38px;
+            img{
+                vertical-align: top;
+            }
+            p{
+                text-align: center;
+                margin-top: 20px;
+            }
+        }
+    }
+    .buyer_android,.buyer_ios{
+        .title{
+            height: 185px;
+        }
+    }
+    .failure_pay{
+        .title{
+            height: 110px;
+            i{
+                background-position: -74px -1948px;
+                height: 61px;
+            }
+            .descript{
+                margin-top: -15px;
+            }
+        }
+    }
+    .unPay{
+        .title{
+            height: 170px;
+            i{
+                background-position: -74px -1860px;
+            }
+            .operation{
+                margin: -15px 0 20px 0;
+                height: 38px;
+                line-height: 38px;
+                .goPay{
+                    width: 110px;
+                    height: 38px;
+                    display: inline-block;
+                    text-align: center;
+                    color: #fff;
+                    background: #208fdd;
+                    margin:0 10px;
+                } 
+                .cancelOrder{
+                    color: #208fdd;
+                    cursor: pointer;
+                }
+            } 
+        }
+    }
+    .cancel{
+        .title{
+            height: 115px;
+            i{
+                background-position: -74px -1860px;
+            }
+            .reason{
+                margin-top: -15px;
+                font-size: 16px;
+            }
+        }    
+    }
+}

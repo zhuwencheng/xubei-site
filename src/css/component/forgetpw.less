@@ -1,0 +1,72 @@
+.loginLayerForm{
+  padding-top: 15px;
+  width: 705px;
+  margin:0 auto;
+  box-sizing: border-box;
+  padding-left: 135px;
+  .inps{
+    position: relative;
+    width: 100%;
+    height: 35px;
+    margin-top: 25px;
+    >.verification{
+      display: inline-block;
+      width: 110px;
+      height: 35px;
+      background-color: #F6F6F6;
+      text-align: center;
+      line-height: 35px;
+      cursor: pointer;
+      margin-left: 3px;
+    }
+    span{
+      display: inline-block;
+      width: 115px;
+      text-align: right;
+    }
+    input{
+      width: 197px;
+      height: 33px;
+      outline: none;
+      text-indent: 35px;
+      border:1px solid #ccc;
+      line-height: 35px;
+    }
+    i{
+      position: absolute;
+      background-image: url(../../images/icon.png);
+      top: 11px;
+      left: 10px;
+      width: 16px;
+      height: 19px;
+      &.user{
+        background-position: -26px -1384px;
+      }
+      &.psd{
+        background-position: -26px -1415px;
+      }
+    }
+  }
+
+  .loginLayerBtn{
+    display: block;
+    width: 200px;
+    height: 40px;
+    border:none;
+    border-radius: 4px;
+    background: #208fdd;
+    color: #fff;
+    font-weight: bold;
+    line-height: 40px;
+    text-align: center;
+    cursor: pointer;
+    margin-top: 50px;
+    margin-left: 118px;
+  }
+}
+
+#spass-error, #spass2-error, #sname-error, #yzm-error{
+  margin-left: 13px;
+  font-size: 12px;
+  color: red;
+}

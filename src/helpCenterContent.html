@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="zh-cmn-Hans">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="renderer" content="webkit" />
+    <title>租号平台_租号玩_虚贝网</title>
+    <meta http-equiv="keywords" content="LOL租号，LOL租号平台，英雄联盟租号，租号玩">
+    <meta http-equiv="description" content="虚贝网是国内专业的LOL租号平台，提供全区全服英雄联盟 游戏账号出租，上万个高端极品账号供您选择，想要租号玩就来虚贝网！">
+    <link rel="icon" href="//static.xubei.com/assets/images/fav-icon.png" />
+    <link href="./css/common/basic.css" rel="stylesheet" type="text/css">
+    <link href="./css/lib/pager.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="./css/helpCenterContent.css">
+</head>
+
+<body>
+<div class="xb-component-header" data-des="组件" activeNav="0"></div>
+<div class="main w1200">
+
+    <!-- 路径导航 B -->
+    <div class="nav">
+        <ul>
+            <li>首页 >> </li>
+            <li>帮助中心 >> </li>
+            <li class="lastNav" style="color: #208fde;">常见问题 </li>
+        </ul>
+        <div class="search">
+            <input class="fl" type="text" placeholder="输入关键字：如余额">
+            <div class="btn fl"></div>
+        </div>
+    </div>
+    <!-- 路径导航 E -->
+
+    <!-- 主体内容 B -->
+    <div class="content">
+        <!-- 左边tab栏 B -->
+        <div class="content-l">
+            <div class="tit">帮助中心</div>
+            <ul>
+    
+            </ul>
+        </div>
+        <!-- 左边tab栏 E -->
+
+        <!-- 右边列表 B -->
+        <div class="content-r">
+            <div class="list">
+            </div>
+
+            <div class="xb-pagination mgt-30" id="page1">
+
+            </div>
+            <div class="callMe">
+                <div class="content">
+                    <div>
+                        <img src="./images/help/service.png" alt="">
+                        <p>客服QQ</p>
+                        <div>客服QQ：<a href="http://wpa.b.qq.com/cgi/wpa.php?ln=1&key=XzgwMDA1NTM3MF80NzI2NTNfODAwMDU1MzcwXzJf">800055370</a></div>
+                        <div>出租客服：<span><a class="f14" href="http://wpa.b.qq.com/cgi/wpa.php?ln=1&key=XzgwMDA1NTM3MF80NzI2NTNfODAwMDU1MzcwXzJf">QQ交谈</a></span></div>
+                        <div>出租客服：<span><a href="http://wpa.b.qq.com/cgi/wpa.php?ln=1&key=XzgwMDA1NTM3MF80NzI2NTNfODAwMDU1MzcwXzJf">QQ交谈</a></span></div>
+                    </div>
+                    <div>
+                        <img src="./images/help/join_qq.png" alt="">
+                        <p>招商合作QQ</p>
+                        <div>加盟分站QQ：<a href="http://wpa.qq.com/msgrd?v=3&uin=2094925133&site=qq&menu=yes">2094925133</a></div>
+                        <div>加盟分销QQ：<a href="http://wpa.qq.com/msgrd?v=3&uin=305750821&site=qq&menu=yes">305750821</a></div>
+                    </div>
+                    <div>
+                        <img src="./images/help/Operate.png" alt="">
+                        <p>运营合作</p>
+                        <div>Email：<a href="javascript:;">taomin@xubei.com</a></div>
+                        <div>运营QQ：<a href="http://wpa.qq.com/msgrd?v=3&uin=690882818&site=qq&menu=yes">690882818</a></div>
+                    </div>
+                    <div class="mgr-0">
+                        <img src="./images/help/coop.png" alt="">
+                        <p>市场合作</p>
+                        <div>Email：<a href="javascript:;">linshunrong@xubei.com</a></div>
+                        <div>市场QQ：<a href="http://wpa.qq.com/msgrd?v=3&uin=446125668&site=qq&menu=yes">446125668</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 右边列表 E -->
+
+    </div>
+    <!-- 主体内容 E -->
+</div>
+
+
+
+<div class="xb-component-footer" data-des="组件"></div>
+</body>
+<script src="./js/lib/require.min.js"></script>
+<script src="./js/xb-home-config.js"></script>
+<script src="./js/helpCenterContent.js"></script>
+<script id="queryCommonMenu" type="text/x-handlebars-template">
+    {{each result as item i}}
+    <li><a href="/helpCenterContent.html?menuId={{item.menu_id}}"><span></span><i class="icon{{item.menu_id}}"></i>{{item.menu_name}}</a></li>
+    {{/each}}
+</script>
+<script id="queryArticleTitle" type="text/x-handlebars-template">
+    <ul>
+    {{each list as item i}}
+    <li><a href="./helpCenterDetails.html?menuId={{item.menu_id}}&articleId={{item.article_id}}">{{item.article_title}}</a></li>
+    {{/each}}
+    </ul>
+</script>
+<script id="keyWordTitle" type="text/x-handlebars-template">
+    <ul class="keyWordsUl">
+        {{each list as item i}}
+        <li>
+            <div class="tit">
+                <span class="spot"></span><a target="_blank" href="./helpCenterDetails.html?menuId={{item.menu_id}}&articleId={{item.article_id}}"></a>
+            </div>
+            <div class="keyContent">
+            </div>
+        </li>
+        {{/each}}
+    </ul>
+</script>
+</html>
